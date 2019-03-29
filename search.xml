@@ -4,11 +4,30 @@
   
     
     <entry>
+      <title>git仓库从https转为ssh</title>
+      <link href="/2019/03/29/git%E4%BB%93%E5%BA%93%E4%BB%8Ehttps%E8%BD%AC%E4%B8%BAssh/"/>
+      <url>/2019/03/29/git%E4%BB%93%E5%BA%93%E4%BB%8Ehttps%E8%BD%AC%E4%B8%BAssh/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>Created at 2019-03-29</p></blockquote><ul><li>配置git name和email</li></ul><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"name"</span></span><br><span class="line">git config --global user.email <span class="string">"email@xxx.com"</span></span><br></pre></td></tr></table></figure><ul><li>看一下ssh目录下的ssh key</li></ul><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls ~/.ssh</span><br></pre></td></tr></table></figure><p>如果是windows 在C盘-&gt;用户-&gt;用户名-&gt;.ssh</p><p>找到id_rsa.pub (id_rsa为默认生成的ssh key，如果生成的时候自己写了就是自己写的名字，多个sshkey的选择要使用的sshkey，注意是.pub文件)，如果没有的话使用下面语句生成</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"email@xxx.com"</span></span><br></pre></td></tr></table></figure><p>复制内容，到公钥中使用的邮箱的github-&gt;setting-&gt;ssh key，new ssh</p><ul><li>进入想要转换的项目根目录.git/config中，将[ogrigin]的url替换</li></ul><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url = https://github.com/name/repository.git</span><br></pre></td></tr></table></figure><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url = git@github.com:name/repository.git</span><br></pre></td></tr></table></figure><ul><li>测试</li></ul><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@xxx.com</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>一些效率工具 精简版</title>
       <link href="/2019/03/26/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/"/>
       <url>/2019/03/26/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/</url>
       
-        <content type="html"><![CDATA[<ul><li><p>对外笔记: 博客 <a href="https://ferrerobomb.github.io/">https://ferrerobomb.github.io/</a></p></li><li><p>笔记: 印象笔记 </p></li><li><p>密码: 1password </p></li><li><p>学习工具: shadow rocket, express VPN等</p></li><li><p>网盘: 坚果云 </p></li><li><p>思维导图: 幕布 </p></li><li><p>看书: iBook, 欧路词典</p></li><li><p>新闻: feedly</p></li><li><p>远程桌面: TeamViewer </p></li><li><p>剪切板: Ditto </p></li><li><p>其他: everything，snipaste </p></li></ul>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>Created at 2019-03-26</p></blockquote><ul><li><p>对外笔记: 博客 <a href="https://ferrerobomb.github.io/">https://ferrerobomb.github.io/</a></p></li><li><p>笔记: 印象笔记 </p></li><li><p>密码: 1password </p></li><li><p>学习工具: shadow rocket, express VPN等</p></li><li><p>网盘: 坚果云 </p></li><li><p>思维导图: 幕布 </p></li><li><p>看书: iBook, 欧路词典</p></li><li><p>新闻: feedly</p></li><li><p>远程桌面: TeamViewer </p></li><li><p>剪切板: Ditto </p></li><li><p>其他: everything，snipaste </p></li></ul>]]></content>
       
       
       
