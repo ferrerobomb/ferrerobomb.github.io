@@ -46,7 +46,7 @@
       <link href="/2019/03/26/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%A8%A1%E7%89%88/"/>
       <url>/2019/03/26/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%A8%A1%E7%89%88/</url>
       
-        <content type="html"><![CDATA[<h1 id="模版修改"><a href="#模版修改" class="headerlink" title="模版修改"></a>模版修改</h1><blockquote><p>Created at 2019-03-26</p></blockquote><ul><li>melody框架使用的<strong>Stylus</strong> 是一个<strong>基于Node.js的CSS的预处理框架</strong></li><li>css<ul><li>banner图片没加载出来的时候蓝色换成了黑色，在head.styl文件中修改#nav   background-color: $black</li></ul></li><li>ico更换<ul><li>项目根目录 ▸ ⁨themes⁩ ▸ ⁨melody⁩ ▸ ⁨source⁩ ▸ melody-favicon.ico</li><li>注意是主题目录下的不是public目录下的，每次生成public都会被替换</li></ul></li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="模版修改"><a href="#模版修改" class="headerlink" title="模版修改"></a>模版修改</h1><blockquote><p>Created at 2019-03-26</p></blockquote><ul><li>melody框架使用的<strong>Stylus</strong> 是一个<strong>基于Node.js的CSS的预处理框架</strong></li><li>css<ul><li>banner图片没加载出来的时候蓝色换成了黑色，在head.styl文件中修改#nav   background-color: $black</li></ul></li><li>ico更换<ul><li>项目根目录 ▸ ⁨themes⁩ ▸ ⁨melody⁩ ▸ ⁨source⁩ ▸ melody-favicon.ico</li><li>注意是主题目录下的不是public目录下的，每次生成public都会被替换</li></ul></li><li>使用font-awesome v5</li><li>添加邮件</li></ul>]]></content>
       
       
       
