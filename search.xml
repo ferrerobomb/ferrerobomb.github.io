@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>moment.js的使用技巧</title>
+      <link href="/2019/03/30/moment.js%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+      <url>/2019/03/30/moment.js%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
+      
+        <content type="html"><![CDATA[<ul><li>在使用moment.js和antdesign的DatePicker的时候遇到的时区问题<ul><li>在前端编辑时间的时候需要是UTC时间，而DatePicker默认是本地时间。需要在调用api发送的时候将时间修改一下,下面的写法是不生效的</li></ul></li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> startTime = moment().utc().format(<span class="string">'YYYY-MM-DDTHH:mm:ssZ'</span>);</span><br></pre></td></tr></table></figure><p>而下面这种写法可以</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> startTime = moment().utc().format(<span class="string">'YYYY-MM-DDTHH:mm:ss'</span>)+<span class="string">'Z'</span>;</span><br></pre></td></tr></table></figure><p>有待进一步研究</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> moment.js </tag>
+            
+            <tag> AntDesign </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>git仓库从https转为ssh</title>
       <link href="/2019/03/29/git%E4%BB%93%E5%BA%93%E4%BB%8Ehttps%E8%BD%AC%E4%B8%BAssh/"/>
       <url>/2019/03/29/git%E4%BB%93%E5%BA%93%E4%BB%8Ehttps%E8%BD%AC%E4%B8%BAssh/</url>
