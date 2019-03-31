@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>超级索引计划</title>
+      <link href="/2019/04/01/%E8%B6%85%E7%BA%A7%E7%B4%A2%E5%BC%95%E8%AE%A1%E5%88%92/"/>
+      <url>/2019/04/01/%E8%B6%85%E7%BA%A7%E7%B4%A2%E5%BC%95%E8%AE%A1%E5%88%92/</url>
+      
+        <content type="html"><![CDATA[<ul><li>书<ul><li>未读书架</li><li>已读书架</li></ul></li><li>视频</li><li>网址</li><li>工具</li><li>计算机科学与技术<ul><li>前端<ul><li>web<ul><li>react</li><li>vue</li><li>angular</li><li>angularjs</li></ul></li><li>游戏</li><li>微信小程序</li></ul></li><li>后端<ul><li>java</li><li>nodejs</li><li>python</li><li>database<ul><li>mysql</li><li>mongodb</li><li>redis</li><li>redshift</li></ul></li></ul></li><li>算法</li><li>全栈</li><li>运维</li><li>大数据</li><li>云计算<ul><li>AWS</li></ul></li><li>人工智能</li><li>区块链</li><li>信息安全</li></ul></li><li>金融与经济</li><li>数学</li><li>物理</li><li>化学</li><li>生物</li><li></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 索引 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>多终端同步博客操作</title>
       <link href="/2019/03/31/%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E5%8D%9A%E5%AE%A2%E6%93%8D%E4%BD%9C/"/>
       <url>/2019/03/31/%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E5%8D%9A%E5%AE%A2%E6%93%8D%E4%BD%9C/</url>
@@ -172,9 +191,9 @@
       
         <tags>
             
-            <tag> 坑 </tag>
-            
             <tag> 模版 </tag>
+            
+            <tag> 坑 </tag>
             
         </tags>
       
