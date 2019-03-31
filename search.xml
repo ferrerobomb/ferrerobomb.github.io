@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>多终端同步博客操作</title>
+      <link href="/2019/03/31/%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E5%8D%9A%E5%AE%A2%E6%93%8D%E4%BD%9C/"/>
+      <url>/2019/03/31/%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E5%8D%9A%E5%AE%A2%E6%93%8D%E4%BD%9C/</url>
+      
+        <content type="html"><![CDATA[<p>总是想使用多终端同步和发布博客，于是做以下尝试</p><ul><li>在github简历两个仓库。1.用于储存博客发布版即hexo d部署的。2.用于储存hexo项目源</li><li>因为不是第一次 所以其实很简单，这里简单说以下遇到的一个问题：用多个电脑部署会相互覆盖commit记录的问题。看一下hexo的原理就知道，其实在执行hexo g的时候会将内容整理到public文件夹，并将之前的覆盖，如果没有public文件夹就新建。hexo d也是一样，将public文件夹的内容复制到.deploy文件夹，然后提交到github，所以两个电脑的.deploy的git仓库不同，自然会覆盖。</li><li>知道了原理就很好解决了。我是将.deploy文件夹改为hexo项目的git 子模块，git submodule</li><li>每次使用新终端的时候需要执行的步骤<ul><li>git pull hexo项目</li><li>git pull .deploy (xxx.github.io的项目)</li><li>写博客</li><li>发布</li><li>提交hexo项目</li></ul></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 模版 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>资源存储从公有云切换到jsdeliver</title>
       <link href="/2019/03/31/%E8%B5%84%E6%BA%90%E5%AD%98%E5%82%A8%E4%BB%8E%E5%85%AC%E6%9C%89%E4%BA%91%E5%88%87%E6%8D%A2%E5%88%B0jsdeliver/"/>
       <url>/2019/03/31/%E8%B5%84%E6%BA%90%E5%AD%98%E5%82%A8%E4%BB%8E%E5%85%AC%E6%9C%89%E4%BA%91%E5%88%87%E6%8D%A2%E5%88%B0jsdeliver/</url>
@@ -153,9 +172,9 @@
       
         <tags>
             
-            <tag> 模版 </tag>
-            
             <tag> 坑 </tag>
+            
+            <tag> 模版 </tag>
             
         </tags>
       
