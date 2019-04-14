@@ -6,7 +6,7 @@
   <link href="/rss.xml" rel="self"/>
   
   <link href="https://ferrerobomb.github.io/"/>
-  <updated>2019-04-09T17:17:05.872Z</updated>
+  <updated>2019-04-14T17:06:40.303Z</updated>
   <id>https://ferrerobomb.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>43.Multiply Strings</title>
+    <link href="https://ferrerobomb.github.io/2019/04/15/43-Multiply-Strings/"/>
+    <id>https://ferrerobomb.github.io/2019/04/15/43-Multiply-Strings/</id>
+    <published>2019-04-14T16:31:06.000Z</published>
+    <updated>2019-04-14T17:06:40.303Z</updated>
+    
+    <content type="html"><![CDATA[<p>Given two non-negative integers <code>num1</code> and <code>num2</code> represented as strings, return the product of <code>num1</code> and <code>num2</code>, also represented as a string.</p><p><strong>Example 1:</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: num1 = &quot;2&quot;, num2 = &quot;3&quot;</span><br><span class="line">Output: &quot;6&quot;</span><br></pre></td></tr></table></figure><p><strong>Example 2:</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: num1 = &quot;123&quot;, num2 = &quot;456&quot;</span><br><span class="line">Output: &quot;56088&quot;</span><br></pre></td></tr></table></figure><p><strong>Note:</strong></p><ol><li>The length of both <code>num1</code> and <code>num2</code> is &lt; 110.</li><li>Both <code>num1</code> and <code>num2</code> contain only digits <code>0-9</code>.</li><li>Both <code>num1</code> and <code>num2</code> do not contain any leading zero, except the number 0 itself.</li><li>You <strong>must not use any built-in BigInteger library</strong> or <strong>convert the inputs to integer</strong> directly.</li></ol><p>笔记：</p><ul><li>字符串相乘（可用于计算大数相乘）</li><li>字符串输出</li><li>注意进位</li></ul><p>知识点</p><ul><li>让我们看看发生了什么</li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">123456789</span> * <span class="number">987654321</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">parseInt</span>(<span class="string">"121932631112635269"</span>) === <span class="number">121932631112635260</span>);</span><br><span class="line"><span class="comment">// 输出什么</span></span><br><span class="line"><span class="comment">// 是否正确</span></span><br><span class="line"><span class="comment">// 为什么</span></span><br></pre></td></tr></table></figure><ul><li>String.prototype.charCodeAt()</li></ul><p>解法1：模拟算数乘法运算方法</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://ferrerobomb.github.io/tags/leetcode/"/>
+    
+      <category term="javascript" scheme="https://ferrerobomb.github.io/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>心向未来</title>
