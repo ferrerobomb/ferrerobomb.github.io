@@ -4,19 +4,17 @@
   
     
     <entry>
-      <title>43.Multiply Strings</title>
-      <link href="/2019/04/15/43-Multiply-Strings/"/>
-      <url>/2019/04/15/43-Multiply-Strings/</url>
+      <title>关于chrome卡顿的解决方法</title>
+      <link href="/2019/05/07/%E5%85%B3%E4%BA%8Echrome%E5%8D%A1%E9%A1%BF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+      <url>/2019/05/07/%E5%85%B3%E4%BA%8Echrome%E5%8D%A1%E9%A1%BF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</url>
       
-        <content type="html"><![CDATA[<p>Given two non-negative integers <code>num1</code> and <code>num2</code> represented as strings, return the product of <code>num1</code> and <code>num2</code>, also represented as a string.</p><p><strong>Example 1:</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: num1 = &quot;2&quot;, num2 = &quot;3&quot;</span><br><span class="line">Output: &quot;6&quot;</span><br></pre></td></tr></table></figure><p><strong>Example 2:</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: num1 = &quot;123&quot;, num2 = &quot;456&quot;</span><br><span class="line">Output: &quot;56088&quot;</span><br></pre></td></tr></table></figure><p><strong>Note:</strong></p><ol><li>The length of both <code>num1</code> and <code>num2</code> is &lt; 110.</li><li>Both <code>num1</code> and <code>num2</code> contain only digits <code>0-9</code>.</li><li>Both <code>num1</code> and <code>num2</code> do not contain any leading zero, except the number 0 itself.</li><li>You <strong>must not use any built-in BigInteger library</strong> or <strong>convert the inputs to integer</strong> directly.</li></ol><p>笔记：</p><ul><li>字符串相乘（可用于计算大数相乘）</li><li>字符串输出</li><li>注意进位</li></ul><p>知识点</p><ul><li>让我们看看发生了什么</li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">123456789</span> * <span class="number">987654321</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">parseInt</span>(<span class="string">"121932631112635269"</span>) === <span class="number">121932631112635260</span>);</span><br><span class="line"><span class="comment">// 输出什么</span></span><br><span class="line"><span class="comment">// 是否正确</span></span><br><span class="line"><span class="comment">// 为什么</span></span><br></pre></td></tr></table></figure><ul><li>String.prototype.charCodeAt()</li></ul><p>解法1：模拟算数乘法运算方法</p>]]></content>
+        <content type="html"><![CDATA[<p>最近一周chrome突然变得特别卡，可能是装了什么插件导致</p><p>关闭GPU加速等不起作用，最后还是重置解决，重置之后插件也就都关闭了，就不卡了。</p><p>在设置的最下面重置</p><p><img src="https://cdn.jsdelivr.net/gh/ferrerobomb/jsDeliver@0.0.2/chrome%E9%87%8D%E7%BD%AE%E6%88%AA%E5%9B%BE.png" alt="chrome重置截图"></p>]]></content>
       
       
       
         <tags>
             
-            <tag> leetcode </tag>
-            
-            <tag> javascript </tag>
+            <tag> chrome </tag>
             
         </tags>
       
@@ -67,7 +65,7 @@
       <link href="/2019/03/31/%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E5%8D%9A%E5%AE%A2%E6%93%8D%E4%BD%9C/"/>
       <url>/2019/03/31/%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E5%8D%9A%E5%AE%A2%E6%93%8D%E4%BD%9C/</url>
       
-        <content type="html"><![CDATA[<p>总是想使用多终端同步和发布博客，于是做以下尝试</p><ul><li>在github简历两个仓库。1.用于储存博客发布版即hexo d部署的。2.用于储存hexo项目源</li><li>因为不是第一次 所以其实很简单，这里简单说以下遇到的一个问题：用多个电脑部署会相互覆盖commit记录的问题。看一下hexo的原理就知道，其实在执行hexo g的时候会将内容整理到public文件夹，并将之前的覆盖，如果没有public文件夹就新建。hexo d也是一样，将public文件夹的内容复制到.deploy文件夹，然后提交到github，所以两个电脑的.deploy的git仓库不同，自然会覆盖。</li><li>知道了原理就很好解决了。我是将.deploy文件夹改为hexo项目的git 子模块，git submodule</li><li>每次使用新终端的时候需要执行的步骤<ul><li>git pull hexo项目</li><li>git pull .deploy (xxx.github.io的项目)</li><li>写博客</li><li>发布</li><li>提交hexo项目</li></ul></li></ul>]]></content>
+        <content type="html"><![CDATA[<p>总是想使用多终端同步和发布博客，于是做以下尝试</p><ul><li>在github简历两个仓库。1.用于储存博客发布版即hexo d部署的。2.用于储存hexo项目源</li><li>因为不是第一次 所以其实很简单，这里简单说以下遇到的一个问题：用多个电脑部署会相互覆盖commit记录的问题。看一下hexo的原理就知道，其实在执行hexo g的时候会将内容整理到public文件夹，并将之前的覆盖，如果没有public文件夹就新建。hexo d也是一样，将public文件夹的内容复制到.deploy文件夹，然后提交到github，所以两个电脑的.deploy的git仓库不同，自然会覆盖。</li><li>知道了原理就很好解决了。我是将.deploy文件夹改为hexo项目的git 子模块，git submodule</li><li>每次使用新终端的时候需要执行的步骤<ul><li>git pull hexo项目 （cd啊）</li><li>git pull .deploy_git (xxx.github.io的项目)</li><li>写博客</li><li>发布</li><li>提交hexo项目</li></ul></li></ul>]]></content>
       
       
       
@@ -86,7 +84,7 @@
       <link href="/2019/03/31/%E8%B5%84%E6%BA%90%E5%AD%98%E5%82%A8%E4%BB%8E%E5%85%AC%E6%9C%89%E4%BA%91%E5%88%87%E6%8D%A2%E5%88%B0jsdeliver/"/>
       <url>/2019/03/31/%E8%B5%84%E6%BA%90%E5%AD%98%E5%82%A8%E4%BB%8E%E5%85%AC%E6%9C%89%E4%BA%91%E5%88%87%E6%8D%A2%E5%88%B0jsdeliver/</url>
       
-        <content type="html"><![CDATA[<ul><li>之前用的七牛云，但是连接是http，强迫症就必须使用https</li><li>使用<code>&lt;https://www.jsdelivr.com/&gt;</code><ul><li>首先去Github建一个仓库我的名字叫jsDeliver</li><li>然后上传资源，以首页banner为例<code>https://github.com/ferrerobomb/jsDeliver/blob/master/eve01.jpg</code></li><li>release并记下版本号</li><li>发布成功后访问<code>&lt;https://cdn.jsdelivr.net/gh/ferrerobomb/jsDeliver@0.0.1/eve01.jpg&gt;</code>即可</li></ul></li><li>使用方法：<a href="https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径</a></li></ul>]]></content>
+        <content type="html"><![CDATA[<ul><li>之前用的七牛云，但是连接是http，强迫症就必须使用https</li><li>使用<code>&lt;https://www.jsdelivr.com/&gt;</code><ul><li>首先去Github建一个仓库我的名字叫jsDeliver</li><li>然后上传资源，以首页banner为例<code>https://github.com/ferrerobomb/jsDeliver/blob/master/eve01.jpg</code></li><li>release并记下版本号</li><li>发布成功后访问<code>&lt;https://cdn.jsdelivr.net/gh/ferrerobomb/jsDeliver@0.0.1/eve01.jpg&gt;</code>即可</li></ul></li><li>使用方法：<a href="https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径</a></li><li>版本向下兼容</li></ul>]]></content>
       
       
       
@@ -116,19 +114,6 @@
             <tag> 模版 </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2019/03/30/hello-world/"/>
-      <url>/2019/03/30/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
       
     </entry>
     
@@ -215,6 +200,19 @@
             <tag> 模版 </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2019/03/26/hello-world/"/>
+      <url>/2019/03/26/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
       
     </entry>
     

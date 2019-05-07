@@ -6,7 +6,7 @@
   <link href="/rss.xml" rel="self"/>
   
   <link href="https://ferrerobomb.github.io/"/>
-  <updated>2019-04-14T17:06:40.303Z</updated>
+  <updated>2019-05-07T07:03:48.779Z</updated>
   <id>https://ferrerobomb.github.io/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>43.Multiply Strings</title>
-    <link href="https://ferrerobomb.github.io/2019/04/15/43-Multiply-Strings/"/>
-    <id>https://ferrerobomb.github.io/2019/04/15/43-Multiply-Strings/</id>
-    <published>2019-04-14T16:31:06.000Z</published>
-    <updated>2019-04-14T17:06:40.303Z</updated>
+    <title>关于chrome卡顿的解决方法</title>
+    <link href="https://ferrerobomb.github.io/2019/05/07/%E5%85%B3%E4%BA%8Echrome%E5%8D%A1%E9%A1%BF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+    <id>https://ferrerobomb.github.io/2019/05/07/关于chrome卡顿的解决方法/</id>
+    <published>2019-05-07T06:47:29.000Z</published>
+    <updated>2019-05-07T07:03:48.779Z</updated>
     
-    <content type="html"><![CDATA[<p>Given two non-negative integers <code>num1</code> and <code>num2</code> represented as strings, return the product of <code>num1</code> and <code>num2</code>, also represented as a string.</p><p><strong>Example 1:</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: num1 = &quot;2&quot;, num2 = &quot;3&quot;</span><br><span class="line">Output: &quot;6&quot;</span><br></pre></td></tr></table></figure><p><strong>Example 2:</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: num1 = &quot;123&quot;, num2 = &quot;456&quot;</span><br><span class="line">Output: &quot;56088&quot;</span><br></pre></td></tr></table></figure><p><strong>Note:</strong></p><ol><li>The length of both <code>num1</code> and <code>num2</code> is &lt; 110.</li><li>Both <code>num1</code> and <code>num2</code> contain only digits <code>0-9</code>.</li><li>Both <code>num1</code> and <code>num2</code> do not contain any leading zero, except the number 0 itself.</li><li>You <strong>must not use any built-in BigInteger library</strong> or <strong>convert the inputs to integer</strong> directly.</li></ol><p>笔记：</p><ul><li>字符串相乘（可用于计算大数相乘）</li><li>字符串输出</li><li>注意进位</li></ul><p>知识点</p><ul><li>让我们看看发生了什么</li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">123456789</span> * <span class="number">987654321</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">parseInt</span>(<span class="string">"121932631112635269"</span>) === <span class="number">121932631112635260</span>);</span><br><span class="line"><span class="comment">// 输出什么</span></span><br><span class="line"><span class="comment">// 是否正确</span></span><br><span class="line"><span class="comment">// 为什么</span></span><br></pre></td></tr></table></figure><ul><li>String.prototype.charCodeAt()</li></ul><p>解法1：模拟算数乘法运算方法</p>]]></content>
+    <content type="html"><![CDATA[<p>最近一周chrome突然变得特别卡，可能是装了什么插件导致</p><p>关闭GPU加速等不起作用，最后还是重置解决，重置之后插件也就都关闭了，就不卡了。</p><p>在设置的最下面重置</p><p><img src="https://cdn.jsdelivr.net/gh/ferrerobomb/jsDeliver@0.0.2/chrome%E9%87%8D%E7%BD%AE%E6%88%AA%E5%9B%BE.png" alt="chrome重置截图"></p>]]></content>
     
     <summary type="html">
     
@@ -38,9 +38,7 @@
     </summary>
     
     
-      <category term="leetcode" scheme="https://ferrerobomb.github.io/tags/leetcode/"/>
-    
-      <category term="javascript" scheme="https://ferrerobomb.github.io/tags/javascript/"/>
+      <category term="chrome" scheme="https://ferrerobomb.github.io/tags/chrome/"/>
     
   </entry>
   
@@ -49,7 +47,7 @@
     <link href="https://ferrerobomb.github.io/2019/04/10/%E5%BF%83%E5%90%91%E6%9C%AA%E6%9D%A5/"/>
     <id>https://ferrerobomb.github.io/2019/04/10/心向未来/</id>
     <published>2019-04-09T16:58:42.000Z</published>
-    <updated>2019-04-09T17:17:05.872Z</updated>
+    <updated>2019-05-07T06:45:37.257Z</updated>
     
     <content type="html"><![CDATA[<p>未来一定是属于人工智能的。或者是属于计算智能的。</p><p>我也不知道为什么这个词叫人工智能，人的智能毕竟是有限的。</p><p>既然知道未来在哪里，那么我应该向目标前进。从大学的时候大概就接触过人工智能，机器学习，神经网络等知识，没有深入学习，也没有什么大框架的概念，现在也是如此。这么多年了，网上的资料怎么感觉还不是很多，说明还很不成熟。据业内人士说，现在的人工智障水平非常弱，模型和训练感觉并不是属于未来的。alphago zero，就是那个自我对弈的最终版，大概是哪个样子才对吧。</p><p>目前可以做的还是向着这个方向走，但是未来还很远。</p>]]></content>
     
@@ -75,7 +73,7 @@
     <link href="https://ferrerobomb.github.io/2019/04/01/%E8%B6%85%E7%BA%A7%E7%B4%A2%E5%BC%95%E8%AE%A1%E5%88%92/"/>
     <id>https://ferrerobomb.github.io/2019/04/01/超级索引计划/</id>
     <published>2019-03-31T16:06:03.000Z</published>
-    <updated>2019-03-31T16:38:12.482Z</updated>
+    <updated>2019-05-07T06:45:37.260Z</updated>
     
     <content type="html"><![CDATA[<ul><li>书<ul><li>未读书架</li><li>已读书架</li></ul></li><li>视频</li><li>网址</li><li>工具</li><li>计算机科学与技术<ul><li>前端<ul><li>web<ul><li>react</li><li>vue</li><li>angular</li><li>angularjs</li></ul></li><li>游戏</li><li>微信小程序</li></ul></li><li>后端<ul><li>java</li><li>nodejs</li><li>python</li><li>database<ul><li>mysql</li><li>mongodb</li><li>redis</li><li>redshift</li></ul></li></ul></li><li>算法</li><li>全栈</li><li>运维</li><li>大数据</li><li>云计算<ul><li>AWS</li></ul></li><li>人工智能</li><li>区块链</li><li>信息安全</li></ul></li><li>金融与经济</li><li>数学</li><li>物理</li><li>化学</li><li>生物</li><li></li></ul>]]></content>
     
@@ -101,9 +99,9 @@
     <link href="https://ferrerobomb.github.io/2019/03/31/%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E5%8D%9A%E5%AE%A2%E6%93%8D%E4%BD%9C/"/>
     <id>https://ferrerobomb.github.io/2019/03/31/多终端同步博客操作/</id>
     <published>2019-03-31T15:46:17.000Z</published>
-    <updated>2019-03-31T15:55:28.699Z</updated>
+    <updated>2019-05-07T07:04:27.104Z</updated>
     
-    <content type="html"><![CDATA[<p>总是想使用多终端同步和发布博客，于是做以下尝试</p><ul><li>在github简历两个仓库。1.用于储存博客发布版即hexo d部署的。2.用于储存hexo项目源</li><li>因为不是第一次 所以其实很简单，这里简单说以下遇到的一个问题：用多个电脑部署会相互覆盖commit记录的问题。看一下hexo的原理就知道，其实在执行hexo g的时候会将内容整理到public文件夹，并将之前的覆盖，如果没有public文件夹就新建。hexo d也是一样，将public文件夹的内容复制到.deploy文件夹，然后提交到github，所以两个电脑的.deploy的git仓库不同，自然会覆盖。</li><li>知道了原理就很好解决了。我是将.deploy文件夹改为hexo项目的git 子模块，git submodule</li><li>每次使用新终端的时候需要执行的步骤<ul><li>git pull hexo项目</li><li>git pull .deploy (xxx.github.io的项目)</li><li>写博客</li><li>发布</li><li>提交hexo项目</li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>总是想使用多终端同步和发布博客，于是做以下尝试</p><ul><li>在github简历两个仓库。1.用于储存博客发布版即hexo d部署的。2.用于储存hexo项目源</li><li>因为不是第一次 所以其实很简单，这里简单说以下遇到的一个问题：用多个电脑部署会相互覆盖commit记录的问题。看一下hexo的原理就知道，其实在执行hexo g的时候会将内容整理到public文件夹，并将之前的覆盖，如果没有public文件夹就新建。hexo d也是一样，将public文件夹的内容复制到.deploy文件夹，然后提交到github，所以两个电脑的.deploy的git仓库不同，自然会覆盖。</li><li>知道了原理就很好解决了。我是将.deploy文件夹改为hexo项目的git 子模块，git submodule</li><li>每次使用新终端的时候需要执行的步骤<ul><li>git pull hexo项目 （cd啊）</li><li>git pull .deploy_git (xxx.github.io的项目)</li><li>写博客</li><li>发布</li><li>提交hexo项目</li></ul></li></ul>]]></content>
     
     <summary type="html">
     
@@ -127,9 +125,9 @@
     <link href="https://ferrerobomb.github.io/2019/03/31/%E8%B5%84%E6%BA%90%E5%AD%98%E5%82%A8%E4%BB%8E%E5%85%AC%E6%9C%89%E4%BA%91%E5%88%87%E6%8D%A2%E5%88%B0jsdeliver/"/>
     <id>https://ferrerobomb.github.io/2019/03/31/资源存储从公有云切换到jsdeliver/</id>
     <published>2019-03-31T15:38:04.000Z</published>
-    <updated>2019-03-31T15:45:36.097Z</updated>
+    <updated>2019-05-07T07:03:42.523Z</updated>
     
-    <content type="html"><![CDATA[<ul><li>之前用的七牛云，但是连接是http，强迫症就必须使用https</li><li>使用<code>&lt;https://www.jsdelivr.com/&gt;</code><ul><li>首先去Github建一个仓库我的名字叫jsDeliver</li><li>然后上传资源，以首页banner为例<code>https://github.com/ferrerobomb/jsDeliver/blob/master/eve01.jpg</code></li><li>release并记下版本号</li><li>发布成功后访问<code>&lt;https://cdn.jsdelivr.net/gh/ferrerobomb/jsDeliver@0.0.1/eve01.jpg&gt;</code>即可</li></ul></li><li>使用方法：<a href="https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<ul><li>之前用的七牛云，但是连接是http，强迫症就必须使用https</li><li>使用<code>&lt;https://www.jsdelivr.com/&gt;</code><ul><li>首先去Github建一个仓库我的名字叫jsDeliver</li><li>然后上传资源，以首页banner为例<code>https://github.com/ferrerobomb/jsDeliver/blob/master/eve01.jpg</code></li><li>release并记下版本号</li><li>发布成功后访问<code>&lt;https://cdn.jsdelivr.net/gh/ferrerobomb/jsDeliver@0.0.1/eve01.jpg&gt;</code>即可</li></ul></li><li>使用方法：<a href="https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径</a></li><li>版本向下兼容</li></ul>]]></content>
     
     <summary type="html">
     
@@ -153,7 +151,7 @@
     <link href="https://ferrerobomb.github.io/2019/03/30/submodule%20test/"/>
     <id>https://ferrerobomb.github.io/2019/03/30/submodule test/</id>
     <published>2019-03-29T17:52:59.000Z</published>
-    <updated>2019-03-29T17:53:38.519Z</updated>
+    <updated>2019-05-07T06:45:37.256Z</updated>
     
     <content type="html"><![CDATA[<ul><li>submodule 测试</li></ul>]]></content>
     
@@ -177,35 +175,11 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://ferrerobomb.github.io/2019/03/30/hello-world/"/>
-    <id>https://ferrerobomb.github.io/2019/03/30/hello-world/</id>
-    <published>2019-03-29T17:06:57.290Z</published>
-    <updated>2019-03-29T17:06:57.291Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>moment.js的使用技巧</title>
     <link href="https://ferrerobomb.github.io/2019/03/30/moment.js%E7%9A%84%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
     <id>https://ferrerobomb.github.io/2019/03/30/moment.js的使用技巧/</id>
     <published>2019-03-29T16:26:14.000Z</published>
-    <updated>2019-03-29T17:06:57.291Z</updated>
+    <updated>2019-03-29T17:00:13.894Z</updated>
     
     <content type="html"><![CDATA[<ul><li>在使用moment.js和antdesign的DatePicker的时候遇到的时区问题<ul><li>在前端编辑时间的时候需要是UTC时间，而DatePicker默认是本地时间。需要在调用api发送的时候将时间修改一下,下面的写法是不生效的</li></ul></li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> startTime = moment().utc().format(<span class="string">'YYYY-MM-DDTHH:mm:ssZ'</span>);</span><br></pre></td></tr></table></figure><p>而下面这种写法可以</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> startTime = moment().utc().format(<span class="string">'YYYY-MM-DDTHH:mm:ss'</span>)+<span class="string">'Z'</span>;</span><br></pre></td></tr></table></figure><p>有待进一步研究</p>]]></content>
     
@@ -237,7 +211,7 @@
     <link href="https://ferrerobomb.github.io/2019/03/29/git%E4%BB%93%E5%BA%93%E4%BB%8Ehttps%E8%BD%AC%E4%B8%BAssh/"/>
     <id>https://ferrerobomb.github.io/2019/03/29/git仓库从https转为ssh/</id>
     <published>2019-03-29T05:05:59.000Z</published>
-    <updated>2019-03-29T17:06:57.290Z</updated>
+    <updated>2019-03-29T05:37:29.226Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>Created at 2019-03-29</p></blockquote><ul><li>配置git name和email</li></ul><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"name"</span></span><br><span class="line">git config --global user.email <span class="string">"email@xxx.com"</span></span><br></pre></td></tr></table></figure><ul><li>看一下ssh目录下的ssh key</li></ul><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls ~/.ssh</span><br></pre></td></tr></table></figure><p>如果是windows 在C盘-&gt;用户-&gt;用户名-&gt;.ssh</p><p>找到id_rsa.pub (id_rsa为默认生成的ssh key，如果生成的时候自己写了就是自己写的名字，多个sshkey的选择要使用的sshkey，注意是.pub文件)，如果没有的话使用下面语句生成</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"email@xxx.com"</span></span><br></pre></td></tr></table></figure><p>复制内容，到公钥中使用的邮箱的github-&gt;setting-&gt;ssh key，new ssh</p><ul><li>进入想要转换的项目根目录.git/config中，将[ogrigin]的url替换</li></ul><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url = https://github.com/name/repository.git</span><br></pre></td></tr></table></figure><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url = git@github.com:name/repository.git</span><br></pre></td></tr></table></figure><ul><li>测试</li></ul><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@xxx.com</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -263,7 +237,7 @@
     <link href="https://ferrerobomb.github.io/2019/03/26/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/"/>
     <id>https://ferrerobomb.github.io/2019/03/26/效率工具/</id>
     <published>2019-03-26T14:45:20.000Z</published>
-    <updated>2019-03-29T17:06:57.295Z</updated>
+    <updated>2019-03-29T04:59:06.458Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>Created at 2019-03-26</p></blockquote><ul><li><p>对外笔记: 博客 <a href="https://ferrerobomb.github.io/">https://ferrerobomb.github.io/</a></p></li><li><p>笔记: 印象笔记 </p></li><li><p>密码: 1password </p></li><li><p>学习工具: shadow rocket, express VPN等</p></li><li><p>网盘: 坚果云 </p></li><li><p>思维导图: 幕布 </p></li><li><p>看书: iBook, 欧路词典</p></li><li><p>新闻: feedly</p></li><li><p>远程桌面: TeamViewer </p></li><li><p>剪切板: Ditto </p></li><li><p>其他: everything，snipaste </p></li></ul>]]></content>
     
@@ -289,7 +263,7 @@
     <link href="https://ferrerobomb.github.io/2019/03/26/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%A8%A1%E7%89%88/"/>
     <id>https://ferrerobomb.github.io/2019/03/26/我的博客模版/</id>
     <published>2019-03-26T06:05:49.000Z</published>
-    <updated>2019-03-31T16:38:28.232Z</updated>
+    <updated>2019-05-07T06:45:37.259Z</updated>
     
     <content type="html"><![CDATA[<h1 id="模版修改"><a href="#模版修改" class="headerlink" title="模版修改"></a>模版修改</h1><blockquote><p>Created at 2019-03-26</p></blockquote><ul><li>melody框架使用的<strong>Stylus</strong> 是一个<strong>基于Node.js的CSS的预处理框架</strong></li><li>css<ul><li>banner图片没加载出来的时候蓝色换成了黑色，在head.styl文件中修改#nav   background-color: $black</li></ul></li><li>ico更换<ul><li>项目根目录 ▸ ⁨themes⁩ ▸ ⁨melody⁩ ▸ ⁨source⁩ ▸ melody-favicon.ico</li><li>注意是主题目录下的不是public目录下的，每次生成public都会被替换</li></ul></li><li>使用font-awesome v5</li><li>添加邮件</li><li>接入google analysis</li></ul>]]></content>
     
@@ -311,11 +285,35 @@
   </entry>
   
   <entry>
+    <title>Hello World</title>
+    <link href="https://ferrerobomb.github.io/2019/03/26/hello-world/"/>
+    <id>https://ferrerobomb.github.io/2019/03/26/hello-world/</id>
+    <published>2019-03-26T03:15:13.126Z</published>
+    <updated>2019-03-26T03:15:13.126Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>初始的样子</title>
     <link href="https://ferrerobomb.github.io/2019/03/26/%E5%88%9D%E5%A7%8B%E7%9A%84%E6%A0%B7%E5%AD%90/"/>
     <id>https://ferrerobomb.github.io/2019/03/26/初始的样子/</id>
     <published>2019-03-25T16:23:35.000Z</published>
-    <updated>2019-03-29T17:06:57.292Z</updated>
+    <updated>2019-03-26T06:02:24.968Z</updated>
     
     <content type="html"><![CDATA[<ul><li><p>melody模版有很多直接拿过来用</p></li><li><p>下面是给像我一样喜欢从零开始的人铺的路</p></li><li><p>按这个走<a href="https://molunerfinn.com/hexo-theme-melody-doc/quick-start.html#installation" target="_blank" rel="noopener">https://molunerfinn.com/hexo-theme-melody-doc/quick-start.html#installation</a></p></li><li><p>我遇到了两个问题</p></li><li><p>1.hexo g 编译报错 layout.pug:11</p><ul><li><p>解决方法<a href="https://github.com/Molunerfinn/hexo-theme-melody/issues/58" target="_blank" rel="noopener">https://github.com/Molunerfinn/hexo-theme-melody/issues/58</a></p></li><li><p>根目录配置文件注意是根目录就是一进项目文件夹的_config.yml </p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># keywords: yGin910</span></span><br><span class="line"><span class="comment"># 改成</span></span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line"><span class="bullet">  -</span> <span class="string">yGin910</span></span><br></pre></td></tr></table></figure></li></ul></li><li><p>2.hexo g 编译报错 layout.pug:31</p></li></ul><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">Unhandled rejection TypeError: /home/hgneer/Hexo/themes/melody/layout/includes/layout.pug:31</span><br><span class="line">    29|       each url <span class="keyword">in</span> theme.stylesheets</span><br><span class="line">    30|         link(rel=<span class="string">'stylesheet'</span>, href=url_for(url) + <span class="string">'?version='</span> + version())</span><br><span class="line">  &gt; 31|     each item <span class="keyword">in</span> theme.cdn.css</span><br><span class="line">    32|       <span class="keyword">if</span> item !== undefined</span><br><span class="line">    33|         link(rel=<span class="string">'stylesheet'</span>, href=item + <span class="string">'?version='</span> + version())</span><br><span class="line">    34|     include ./head.pug</span><br><span class="line"></span><br><span class="line">Cannot <span class="built_in">read</span> property <span class="string">'css'</span> of undefined</span><br><span class="line">    at <span class="built_in">eval</span> (<span class="built_in">eval</span> at wrap (/home/hgneer/Hexo/node_modules/pug-runtime/wrap.js:6:10), &lt;anonymous&gt;:80:25)</span><br><span class="line">    at <span class="built_in">eval</span> (<span class="built_in">eval</span> at wrap (/home/hgneer/Hexo/node_modules/pug-runtime/wrap.js:6:10), &lt;anonymous&gt;:102:4)</span><br><span class="line">    at template (<span class="built_in">eval</span> at wrap (/home/hgneer/Hexo/node_modules/pug-runtime/wrap.js:6:10), &lt;anonymous&gt;:1657:72)</span><br><span class="line">    at Theme._View.View._compiled.locals [as _compiled] (/home/hgneer/Hexo/node_modules/hexo/lib/theme/view.js:125:48)</span><br><span class="line">    at Theme._View.View.View.render (/home/hgneer/Hexo/node_modules/hexo/lib/theme/view.js:30:15)</span><br><span class="line">    at route.set (/home/hgneer/Hexo/node_modules/hexo/lib/hexo/index.js:394:29)</span><br><span class="line">    at tryCatcher (/home/hgneer/Hexo/node_modules/bluebird/js/release/util.js:16:23)</span><br><span class="line">    at /home/hgneer/Hexo/node_modules/bluebird/js/release/method.js:15:34</span><br><span class="line">    at RouteStream._read (/home/hgneer/Hexo/node_modules/hexo/lib/hexo/router.js:134:3)</span><br><span class="line">    at RouteStream.Readable.read (_stream_readable.js:452:10)</span><br><span class="line">    at resume_ (_stream_readable.js:899:12)</span><br><span class="line">    at process._tickCallback (internal/process/next_tick.js:63:19)</span><br></pre></td></tr></table></figure><ul><li>解决方法 这个链接太长 小屏没有换行 所以加了一个代码段<code>https://aipynux.github.io/2019/02/03/%E9%85%8D%E7%BD%AEHexo%E4%B8%BB%E9%A2%98%E4%B9%8BMelody/#%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98</code></li><li>需要复制到Hexo/source/_data下的_config.yml是melody主题目录下的而非Hexo目录下的。 </li><li>3.yml文件是yaml格式</li></ul>]]></content>
     
@@ -343,7 +341,7 @@
     <link href="https://ferrerobomb.github.io/2019/03/25/%E5%8D%9A%E5%AE%A22-0-md/"/>
     <id>https://ferrerobomb.github.io/2019/03/25/博客2-0-md/</id>
     <published>2019-03-25T15:16:06.000Z</published>
-    <updated>2019-03-29T17:06:57.293Z</updated>
+    <updated>2019-03-26T03:15:13.127Z</updated>
     
     <content type="html"><![CDATA[<p>还是很简单的</p><ul><li><p>自动是md格式，.变成了-</p></li><li><p>配置文件_config.yml中最后的配置这三个都要写</p><ul><li>deploy:<br>  type: git<br>  repo:<br>  branch: master</li></ul></li><li><p>下一步，主题，标签系统，日志分类，搜索和评论</p></li><li><p>backup：统计，moment.js记录</p></li><li><p>走了一大圈，又回到了开始</p></li><li><p>melody问题</p><ul><li>keywords改成这种格式</li></ul><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">keywords: </span><br><span class="line"> - blog2.0</span><br></pre></td></tr></table></figure><ul><li></li></ul></li></ul>]]></content>
     
