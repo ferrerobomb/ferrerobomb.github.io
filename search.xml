@@ -8,7 +8,7 @@
       <link href="/2020/02/10/2020%E5%B9%B42%E6%9C%8810%E6%97%A5PCTEST/"/>
       <url>/2020/02/10/2020%E5%B9%B42%E6%9C%8810%E6%97%A5PCTEST/</url>
       
-        <content type="html"><![CDATA[<ul><li>2020年2月10日PC终端测试</li></ul><p>很久没写了，又上来摸摸，熟悉了一下流程。接下来会修改以前博客的错别字，修改<a href="多终端同步博客操作.md">多终端同步博客操作.md</a>,(这次主要是完善一下，还是有不够明确的细节)</p><p>day 1</p><p>读书30m+</p><p>学英语10m+</p><p>工作</p><p><del>健身</del></p><p><del>我又浪费了一天时间</del></p><p>总是想写一些东西，但是又不会写作。准备找东西学学写作，先入个门吧</p><p>乔布斯说，与其被竞争对手干掉，不如我们自己干掉自己</p>]]></content>
+        <content type="html"><![CDATA[<ul><li>2020年2月10日PC终端测试</li></ul><p>很久没写了，又上来摸摸，熟悉了一下流程。接下来会修改以前博客的错别字，修改【多终端同步博客操作】<a href="https://ferrerobomb.github.io/2019/03/31/%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E5%8D%9A%E5%AE%A2%E6%93%8D%E4%BD%9C/">线上链接</a>  <a href="多终端同步博客操作.md">本地连接</a>  (这次主要是完善一下，还是有不够明确的细节)</p><p>day 1</p><p>读书30m+</p><p>学英语10m+</p><p>工作</p><p><del>健身</del></p><p><del>我又浪费了一天时间</del></p><p>总是想写一些东西，但是又不会写作。准备找东西学学写作，先入个门吧</p><p>乔布斯说，与其被竞争对手干掉，不如我们自己干掉自己</p>]]></content>
       
       
       
@@ -105,7 +105,7 @@
       <link href="/2019/03/31/%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E5%8D%9A%E5%AE%A2%E6%93%8D%E4%BD%9C/"/>
       <url>/2019/03/31/%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E5%8D%9A%E5%AE%A2%E6%93%8D%E4%BD%9C/</url>
       
-        <content type="html"><![CDATA[<p>总是想使用多终端同步和发布博客，于是做以下尝试</p><ul><li>在github简历两个仓库。1.用于储存博客发布版即hexo d部署的。2.用于储存hexo项目源</li><li>因为不是第一次 所以其实很简单，这里简单说以下遇到的一个问题：用多个电脑部署会相互覆盖commit记录的问题。看一下hexo的原理就知道，其实在执行hexo g的时候会将内容整理到public文件夹，并将之前的覆盖，如果没有public文件夹就新建。hexo d也是一样，将public文件夹的内容复制到.deploy文件夹，然后提交到github，所以两个电脑的.deploy的git仓库不同，自然会覆盖。</li><li>知道了原理就很好解决了。我是将.deploy文件夹改为hexo项目的git 子模块，git submodule</li><li>每次使用新终端的时候需要执行的步骤<ul><li>git pull hexo项目 （cd啊）</li><li>git pull .deploy_git (xxx.github.io的项目)</li><li>写博客</li><li>发布</li><li>提交hexo项目</li></ul></li></ul>]]></content>
+        <content type="html"><![CDATA[<p>总是想使用多终端同步和发布博客，于是做以下尝试</p><ul><li>在github简历两个仓库。1.用于储存博客发布版即hexo d部署的。2.用于储存hexo项目源</li><li>因为不是第一次 所以其实很简单，这里简单说以下遇到的一个问题：用多个电脑部署会相互覆盖commit记录的问题。看一下hexo的原理就知道，其实在执行hexo g的时候会将内容整理到public文件夹，并将之前的覆盖，如果没有public文件夹就新建。hexo d也是一样，将public文件夹的内容复制到.deploy文件夹，然后提交到github，所以两个电脑的.deploy的git仓库不同，自然会覆盖。</li><li>知道了原理就很好解决了。我是将.deploy文件夹改为hexo项目的git 子模块，git submodule</li><li>每次使用新终端的时候需要执行的步骤<ul><li>git pull hexo项目 （备忘：进入hexo项目，我的叫blog2.0）</li><li>git pull .deploy_git (xxx.github.io的项目)</li><li>写博客</li><li>发布</li><li>提交hexo项目</li></ul></li><li>命令行版<ul><li>cd blog2.0           (进入hexo项目根目录，我的叫blog2.0)</li><li>git pull               （此步骤如果使用ssh注意配置，也可使用http）</li><li>cd ..</li><li>cd .deploy_get</li><li>git pull</li><li>到此所有同步步骤结束</li></ul></li></ul>]]></content>
       
       
       
