@@ -98,14 +98,17 @@ AWS
 因为不是第一次 所以其实很简单，这里简单说以下遇到的一个问题：用多个电脑部署会相互覆盖commit记录的问题。看一下hexo的原理就知道，其实在执行hexo g的时候会将内容整理到public文件夹，并将之前的覆盖，如果没有public文件夹就新建。hexo d也是一样，将public文件夹的内容复制到.deploy文件夹，然后提交到github，所以两个电脑的.deploy的git仓库不同，自然会覆盖。
 知道了原理就很好解决了。我是将.depl ...</div><a class="more" href="/2019/03/31/多终端同步博客操作/#more" style="margin-top: 14px">Read more</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2019/03/31/资源存储从公有云切换到jsdeliver/">资源存储从公有云切换到jsdeliver</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-03-31</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/模版/">模版</a></span><div class="content">
 之前用的七牛云，但是连接是http，强迫症就必须使用https
-使用&lt;https://www.jsdelivr.com/&gt;
+使用https://www.jsdelivr.com/
 首先去Github建一个仓库我的名字叫jsDeliver
-然后上传资源，以首页banner为例https://github.com/ferrerobomb/jsDeliver/blob/master/eve01.jpg
+然后上传资源，以首页banner为例 链接
 release并记下版本号
-发布成功后访问&lt;https://cdn.jsdelivr.net/gh/ferrerobomb/jsDeliver@0.0.1/eve01.jpg&gt;即可
+发布成功后访问 图片链接 即可
 
 
-使用方法：https://cdn.jsdel ...</div><a class="more" href="/2019/03/31/资源存储从公有云切换到jsdeliver/#more" style="margin-top: 14px">Read more</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2019/03/30/submodule test/">test</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-03-30</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/git/">git</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/模版/">模版</a></span><div class="content">
+使用方法：https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径
+版本向下兼容
+
+</div><a class="more" href="/2019/03/31/资源存储从公有云切换到jsdeliver/#more" style="margin-top: 14px">Read more</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2019/03/30/submodule test/">test</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-03-30</time><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/git/">git</a><span class="article-meta__link">-</span><i class="fa fa-tag article-meta__icon" aria-hidden="true"></i><a class="article-meta__tags" href="/tags/模版/">模版</a></span><div class="content">
 submodule 测试
 
 </div><a class="more" href="/2019/03/30/submodule test/#more" style="margin-top: 14px">Read more</a><hr></div><div class="recent-post-item article-container"><a class="article-title" href="/2019/03/30/hello-world/">Hello World</a><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-03-30</time><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.

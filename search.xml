@@ -124,7 +124,7 @@
       <link href="/2019/03/31/%E8%B5%84%E6%BA%90%E5%AD%98%E5%82%A8%E4%BB%8E%E5%85%AC%E6%9C%89%E4%BA%91%E5%88%87%E6%8D%A2%E5%88%B0jsdeliver/"/>
       <url>/2019/03/31/%E8%B5%84%E6%BA%90%E5%AD%98%E5%82%A8%E4%BB%8E%E5%85%AC%E6%9C%89%E4%BA%91%E5%88%87%E6%8D%A2%E5%88%B0jsdeliver/</url>
       
-        <content type="html"><![CDATA[<ul><li>之前用的七牛云，但是连接是http，强迫症就必须使用https</li><li>使用<code>&lt;https://www.jsdelivr.com/&gt;</code><ul><li>首先去Github建一个仓库我的名字叫jsDeliver</li><li>然后上传资源，以首页banner为例<code>https://github.com/ferrerobomb/jsDeliver/blob/master/eve01.jpg</code></li><li>release并记下版本号</li><li>发布成功后访问<code>&lt;https://cdn.jsdelivr.net/gh/ferrerobomb/jsDeliver@0.0.1/eve01.jpg&gt;</code>即可</li></ul></li><li>使用方法：<a href="https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径</a></li><li>版本向下兼容</li></ul>]]></content>
+        <content type="html"><![CDATA[<ul><li>之前用的七牛云，但是连接是http，强迫症就必须使用https</li><li>使用<a href="https://www.jsdelivr.com/" target="_blank" rel="noopener">https://www.jsdelivr.com/</a><ul><li>首先去Github建一个仓库我的名字叫jsDeliver</li><li>然后上传资源，以首页banner为例 <a href="https://github.com/ferrerobomb/jsDeliver/blob/master/eve01.jpg" target="_blank" rel="noopener">链接</a></li><li>release并记下版本号</li><li>发布成功后访问 <a href="https://cdn.jsdelivr.net/gh/ferrerobomb/jsDeliver@0.0.1/eve01.jpg" target="_blank" rel="noopener">图片链接</a> 即可</li></ul></li><li>使用方法：<a href="https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径</a></li><li>版本向下兼容</li></ul>]]></content>
       
       
       
