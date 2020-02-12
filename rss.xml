@@ -6,7 +6,7 @@
   <link href="/rss.xml" rel="self"/>
   
   <link href="https://ferrerobomb.github.io/"/>
-  <updated>2020-02-12T03:51:58.584Z</updated>
+  <updated>2020-02-12T05:11:10.728Z</updated>
   <id>https://ferrerobomb.github.io/</id>
   
   <author>
@@ -17,9 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>引入独立html页面</title>
+    <link href="https://ferrerobomb.github.io/2020/02/12/2020%E5%B9%B42%E6%9C%8811%E6%97%A5-%E5%BC%95%E5%85%A5%E7%8B%AC%E7%AB%8Bhtml%E9%A1%B5%E9%9D%A2/"/>
+    <id>https://ferrerobomb.github.io/2020/02/12/2020年2月11日-引入独立html页面/</id>
+    <published>2020-02-12T04:49:31.000Z</published>
+    <updated>2020-02-12T05:11:10.728Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>我的主题是melody。配置文件在source目录下的_data下，请注意先找到自己主题生效的配置文件，然后在配置文件中的menu下添加目录（如没有menu目录就自己建一个）</li><li>第二步，在hexo的配置文件中添加跳过渲染配置，（在根目录下）</li><li>第三步，在source文件夹下建一个文件夹，名字和主题配置文件中menu下添加的目录名对应</li><li>第四步，进入建好的文件夹，创建index.html入口文件<br>效果：点击目录里xxx，直接跳转到index.html</li></ul><p>以下是图片<br><img src="https://cdn.jsdelivr.net/gh/ferrerobomb/jsDeliver@0.0.3/hexo根目录配置文件跳过渲染配置.png" alt="hexo根目录配置文件跳过渲染配置"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="记录" scheme="https://ferrerobomb.github.io/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>每日流水记账</title>
-    <link href="https://ferrerobomb.github.io/2020/02/12/2020%E5%B9%B42%E6%9C%8811%E6%97%A5/"/>
-    <id>https://ferrerobomb.github.io/2020/02/12/2020年2月11日/</id>
+    <link href="https://ferrerobomb.github.io/2020/02/12/2020%E5%B9%B42%E6%9C%8811%E6%97%A5-%E6%AF%8F%E6%97%A5%E6%B5%81%E6%B0%B4%E8%AE%B0%E8%B4%A6/"/>
+    <id>https://ferrerobomb.github.io/2020/02/12/2020年2月11日-每日流水记账/</id>
     <published>2020-02-12T03:49:31.000Z</published>
     <updated>2020-02-12T03:51:58.584Z</updated>
     
