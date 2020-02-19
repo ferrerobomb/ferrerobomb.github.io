@@ -373,7 +373,7 @@
       <link href="/2019/03/25/%E5%8D%9A%E5%AE%A22-0-md/"/>
       <url>/2019/03/25/%E5%8D%9A%E5%AE%A22-0-md/</url>
       
-        <content type="html"><![CDATA[<p>还是很简单的</p><ul><li><p>自动是md格式，.变成了-</p></li><li><p>配置文件_config.yml中最后的配置这三个都要写</p><ul><li>deploy:<br>  type: git<br>  repo:<br>  branch: master</li></ul></li><li><p>下一步，主题，标签系统，日志分类，搜索和评论</p></li><li><p>backup：统计，moment.js记录</p></li><li><p>走了一大圈，又回到了开始</p></li><li><p>melody问题</p><ul><li>keywords改成这种格式</li></ul><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">keywords: </span><br><span class="line"> - blog2.0</span><br></pre></td></tr></table></figure><ul><li></li></ul></li></ul>]]></content>
+        <content type="html"><![CDATA[<p>还是很简单的</p><ul><li><p>自动是md格式，.变成了-</p></li><li><p>注意事项：md文件中间不能使用空格和.</p></li><li><p>配置文件_config.yml中最后的配置这三个都要写</p><ul><li>deploy:<br>  type: git<br>  repo:<br>  branch: master</li></ul></li><li><p>下一步，主题，标签系统，日志分类，搜索和评论</p></li><li><p>backup：统计，moment.js记录</p></li><li><p>走了一大圈，又回到了开始</p></li><li><p>melody问题</p><ul><li>keywords改成这种格式</li></ul><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">keywords: </span><br><span class="line"> - blog2.0</span><br></pre></td></tr></table></figure><ul><li></li></ul></li></ul>]]></content>
       
       
       
