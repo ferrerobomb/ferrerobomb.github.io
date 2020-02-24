@@ -520,7 +520,7 @@
       <link href="/2016/10/15/%E8%AE%B0%E4%B8%80%E7%AC%94/"/>
       <url>/2016/10/15/%E8%AE%B0%E4%B8%80%E7%AC%94/</url>
       
-        <content type="html"><![CDATA[<p>许久没有更新博客了，也是因为前一阵比较忙的缘故吧。这两天回归正轨，继续在这里写点东西。<br>自己建的网站运行良好，hiahiahia！<br>接触了一个月的前端相关技术，感觉自己慢慢已经有些感觉了。可以一边巩固基础，一边实践着提升一下了，不得不说前端还是很杂的，就像一个大杂烩。但是基础的HTML+CSS+JS核心还是基础，要不断巩固，最近就先从这里开始吧。<br>对了之前发现一个不错的网站叫freecodecamp，很不错的网站，没事的时候在上面写几道，虽然是非常简单的，但是前面的做完后面貌似可以接触到一些实战。很有意思。</p><p>附上今天写的代码，依然觉得很弱B，真是为达目的不择手段。。。题目是删除字符串中的叹号，但是结尾必须有且仅有1个叹号。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">remove</span>(<span class="params">s</span>)</span>&#123;</span><br><span class="line">  <span class="comment">//coding and coding....</span></span><br><span class="line">  <span class="keyword">var</span> arr = [];</span><br><span class="line">  arr = s.split(<span class="string">""</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(arr)</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span> ; i &lt; arr.length ; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(arr[i] == <span class="string">"!"</span>)&#123;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">var</span> j = i; j &lt; arr.length; j++)&#123;</span><br><span class="line">        arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">        <span class="comment">//continue;</span></span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//console.log(arr);</span></span><br><span class="line">    <span class="comment">//i++;</span></span><br><span class="line">  &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span> ; i &lt; arr.length ; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(arr[i] == <span class="string">"!"</span>)&#123;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">var</span> j = i; j &lt; arr.length; j++)&#123;</span><br><span class="line">        arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">        <span class="comment">//continue;</span></span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//console.log(arr);</span></span><br><span class="line">    <span class="comment">//i++;</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(arr);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span> ; i &lt; arr.length; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(arr[i] == <span class="literal">undefined</span>)&#123;</span><br><span class="line">      arr.length = i;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span>(arr[arr.length<span class="number">-1</span>] != <span class="string">"!"</span>)&#123;</span><br><span class="line">    arr[arr.length] = <span class="string">"!"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr.join(<span class="string">""</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>有很多牛逼的写法，我就附上一个我觉着最好的吧。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">remove</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> s.replace(<span class="regexp">/!+/g</span>, <span class="string">''</span>) + <span class="string">'!'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>或者<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> remove = <span class="function"><span class="params">s</span> =&gt;</span> s.replace(<span class="regexp">/!+/g</span>, <span class="string">""</span>)+<span class="string">"!"</span>;</span><br></pre></td></tr></table></figure></p><p>人家只用一行，差距。。</p>]]></content>
+        <content type="html"><![CDATA[<p>许久没有更新博客了，也是因为前一阵比较忙的缘故吧。这两天回归正轨，继续在这里写点东西。<br>自己建的网站运行良好，hiahiahia！<br>接触了一个月的前端相关技术，感觉自己慢慢已经有些感觉了。可以一边巩固基础，一边实践着提升一下了，不得不说前端还是很杂的，就像一个大杂烩。但是基础的HTML+CSS+JS核心还是基础，要不断巩固，最近就先从这里开始吧。<br>对了之前发现一个不错的网站叫freecodecamp，很不错的网站，没事的时候在上面写几道，虽然是非常简单的，但是前面的做完后面貌似可以接触到一些实战。很有意思。</p><p>附上今天写的代码，依然觉得很弱B，真是为达目的不择手段。。。题目是删除字符串中的叹号，但是结尾必须有且仅有1个叹号。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">remove</span>(<span class="params">s</span>)</span>&#123;</span><br><span class="line">  <span class="comment">//coding and coding....</span></span><br><span class="line">  <span class="keyword">var</span> arr = [];</span><br><span class="line">  arr = s.split(<span class="string">""</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(arr)</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span> ; i &lt; arr.length ; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(arr[i] == <span class="string">"!"</span>)&#123;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">var</span> j = i; j &lt; arr.length; j++)&#123;</span><br><span class="line">        arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">        <span class="comment">//continue;</span></span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//console.log(arr);</span></span><br><span class="line">    <span class="comment">//i++;</span></span><br><span class="line">  &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span> ; i &lt; arr.length ; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(arr[i] == <span class="string">"!"</span>)&#123;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">var</span> j = i; j &lt; arr.length; j++)&#123;</span><br><span class="line">        arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">        <span class="comment">//continue;</span></span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//console.log(arr);</span></span><br><span class="line">    <span class="comment">//i++;</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(arr);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span> ; i &lt; arr.length; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(arr[i] == <span class="literal">undefined</span>)&#123;</span><br><span class="line">      arr.length = i;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span>(arr[arr.length<span class="number">-1</span>] != <span class="string">"!"</span>)&#123;</span><br><span class="line">    arr[arr.length] = <span class="string">"!"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr.join(<span class="string">""</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>有很多牛逼的写法，我就附上一个我觉着最好的吧。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">remove</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> s.replace(<span class="regexp">/!+/g</span>, <span class="string">''</span>) + <span class="string">'!'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>或者<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> remove = <span class="function"><span class="params">s</span> =&gt;</span> s.replace(<span class="regexp">/!+/g</span>, <span class="string">""</span>)+<span class="string">"!"</span>;</span><br></pre></td></tr></table></figure></p>]]></content>
       
       
       <categories>
@@ -548,31 +548,6 @@
         <content type="html"><![CDATA[<p>嗯？我的格子又没了？<br>—华丽的分割线—<br>弄好了   坑<br>之前把自己的域名改DNS导向过这里，然后竟然忘了删了。<br>删了一次CNAME竟然还没删掉，不过第二次总算删掉了。<br>今天科目二模拟训练，这个离合油门和刹车，挂挡，要练成习惯。<br>明天详细学习一下bower，深入的了解一下。</p><p>明天就是国庆节啦！</p>]]></content>
       
       
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>近期总结和计划</title>
-      <link href="/2016/09/27/%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93%E5%92%8C%E8%AE%A1%E5%88%92/"/>
-      <url>/2016/09/27/%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93%E5%92%8C%E8%AE%A1%E5%88%92/</url>
-      
-        <content type="html"><![CDATA[<p>算是一篇日记吧，上次写日记也不知是几百年之前。<br>最近干了很多事。<br>从8月中旬在实习结束之后，到现在，短短一个多月时间，感觉自己每天过的都极其充实。<br>我不知道是为什么，突然就变成这样了，很神奇。</p><p>昨天去了移动把实习相关的事情办妥。终于算是把学校的实习了结了。</p><p>报了班学车。科目一已经考完。国庆节科目二就可以学完，之后就简单了，不出意外的话年前可以拿到驾驶证。终于在大四开始的时候学了车，毕竟以后总是要学的，还是早学一点好。</p><p>从8月底开始写博客，打算把自己平时学到的和解决问题的一些方法记录下来。为了自己以后可以看，也为了能帮助做同样事情的人。</p><p>很幸运。投的简历被舒老师选中，跟着舒老师一起做项目。做的是前端，学习了新框架AngularJS，重新拾起javascript以及其他知识。平时和大家一起讨论的感觉非常好，相互帮助，一起成长。最近第二版也已经上线，我也慢慢开始融入这个项目。</p><p>shadowsocks<br>最近自己搭建了一个shadowsocks服务器，也算是一个相对完整的小项目吧，由于涉及到的知识量巨大，反而给予了我充足到的动力。前端，后端，数据库，网站，域名，服务器，操作系统等等，算是对自己所学过的知识做一个整合，并且应用于实践。对自己的技术水平提升颇大，我觉得挺好的。<br>今天下午算是发布了正式版第一版吧，哈哈姑且这么叫。全流程已经跑通，可以使用。接下来打算边强化自己的知识水平，边把网站做得更好，全方面的，一点一点开始做。</p><p>关于我之后的打算：首先还是想读书，也不知道读什么，先把现在读的读完吧，最近空闲时间在读JavaScript高级程序设计和计算机程序设计艺术（这本书太难读了，可能先晾着了）。<br>其次就是做做项目，学学习，写写博客。我也不知道是什么让我一直保持这种状态，总之就是一直保持着，并且干劲还越来越强。<br>虽然我已经知道学习很重要，但是我依然坚定的持有自己的想法，那就是在实践中学习。只有在实践中学习，才能真正学到有用的属于自己的知识。包括英语。从强制自己使用google到现在已经半个月了，加上使用Stack Overflow和Github，感觉自己的英语水平蹭蹭的涨，肉眼可见。</p><p>关于团队。我很早就想组建一个团队，但是这需要机遇。现在很幸运加入了一个很nice的团队，一起做事。虽然之后的路还不明朗，但是可以做好当下的事，之后再看啦！现在团队里的伙伴都非常棒！比我厉害太多了，包括锤老师、舒老师，他们有太多优点值得我去学习。</p><p>关于开源，今天就先不谈了，以后单独写一篇文章说说自己的想法。我觉得开源开始很不错的！</p><p>我现在大四，21岁，即将踏上征程，再此记录一下。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Diary </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Diary </tag>
-            
-        </tags>
       
     </entry>
     
@@ -845,9 +820,9 @@
       
         <tags>
             
-            <tag> 前端 </tag>
-            
             <tag> AngularJS </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
       
@@ -872,9 +847,9 @@
       
         <tags>
             
-            <tag> 前端 </tag>
-            
             <tag> JavaScript </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
       
@@ -1281,31 +1256,6 @@
         <tags>
             
             <tag> blog </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>关于java中的this和super</title>
-      <link href="/2016/08/31/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E7%9A%84this%E5%92%8Csuper/"/>
-      <url>/2016/08/31/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E7%9A%84this%E5%92%8Csuper/</url>
-      
-        <content type="html"><![CDATA[<p>由于媳妇催着我睡觉，所以只能明天再写了，但是我必须要起个头，关于java中的this关键字和super关键字，大一的时候就不是很理解，后来还特意研究了一下，表面上理解了，但其实还是不太理解，直到今天亲自用到了，才有了深刻的体会。</p><p>关于详细用法等过两天得空补上。</p><p>明天考前最后一天要抓紧复习一下，然后1号2号是考试，赶紧考完就没事了。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> java </tag>
             
         </tags>
       
