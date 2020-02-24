@@ -388,6 +388,19 @@
     
     
     <entry>
+      <title>新的测试</title>
+      <link href="/2017/08/26/%E6%96%B0%E7%9A%84%E6%B5%8B%E8%AF%95/"/>
+      <url>/2017/08/26/%E6%96%B0%E7%9A%84%E6%B5%8B%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<p>111</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>2017</title>
       <link href="/2017/01/05/2017/"/>
       <url>/2017/01/05/2017/</url>
@@ -414,6 +427,31 @@
     
     
     <entry>
+      <title>垂直居中方法总结</title>
+      <link href="/2016/12/16/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/"/>
+      <url>/2016/12/16/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/</url>
+      
+        <content type="html"><![CDATA[<h1 id="垂直居中方法总结"><a href="#垂直居中方法总结" class="headerlink" title="垂直居中方法总结"></a>垂直居中方法总结</h1><h2 id="1-最好的垂直居中方法-—-flex"><a href="#1-最好的垂直居中方法-—-flex" class="headerlink" title="1.最好的垂直居中方法 — flex"></a>1.最好的垂直居中方法 — flex</h2><p>很遗憾，各大浏览器目前还不支持,所以 这条根本没用！<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">  <span class="selector-class">.wrapper</span> &#123;</span></span><br><span class="line"><span class="undefined">  border: 2px solid red;</span></span><br><span class="line"><span class="undefined">  height: 500px;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.container</span> &#123;</span></span><br><span class="line"><span class="undefined">border: 2px solid blue;</span></span><br><span class="line"><span class="undefined">width: 320px;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">display: flex;</span></span><br><span class="line"><span class="undefined">display: -webkit-flex;</span></span><br><span class="line"><span class="undefined">align-items: center;</span></span><br><span class="line"><span class="undefined">justify-content: center;</span></span><br><span class="line"><span class="undefined">-webkit-justify-content: center;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span>    </span><br><span class="line">    对酒当歌，人生几何？譬如朝露，去日苦多。</span><br><span class="line">慨当以慷，忧思难忘。何以解忧？唯有杜康。</span><br><span class="line">青青子衿，悠悠我心。但为君故，沉吟至今。</span><br><span class="line">呦呦鹿鸣，食野之苹。我有嘉宾，鼓瑟吹笙。</span><br><span class="line">明明如月，何时可辍？忧从中来，不可断绝。</span><br><span class="line">越陌度阡，枉用相存。契阔谈宴，心念旧恩。</span><br><span class="line">月明星稀，乌鹊南飞。绕树三匝，何枝可依？</span><br><span class="line">山不厌高，海不厌深。周公吐哺，天下归心。</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p><h2 id="2-特别简单的垂直居中方法-—-line-height"><a href="#2-特别简单的垂直居中方法-—-line-height" class="headerlink" title="2.特别简单的垂直居中方法 — line-height"></a>2.特别简单的垂直居中方法 — line-height</h2><p>其实我在逗你玩，这种方法只能用于小段单行文字！<br>不过还是挺好用的！<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">  <span class="selector-class">.wrapper</span> &#123;</span></span><br><span class="line"><span class="undefined">  border: 2px solid red;</span></span><br><span class="line"><span class="undefined">  height: 500px;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.container</span> &#123;</span></span><br><span class="line"><span class="undefined">border: 2px solid blue;</span></span><br><span class="line"><span class="undefined">width: 320px;</span></span><br><span class="line"><span class="undefined">line-height: 200px;</span></span><br><span class="line"><span class="undefined">height: 200px;</span></span><br><span class="line"><span class="undefined">margin: auto;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.content</span> &#123;</span></span><br><span class="line"><span class="undefined">border: 2px solid black;</span></span><br><span class="line"><span class="undefined">width: 200px;</span></span><br><span class="line"><span class="undefined">line-height: 50px;</span></span><br><span class="line"><span class="undefined">height: 50px;</span></span><br><span class="line"><span class="css"><span class="selector-tag">margin</span>: <span class="selector-tag">auto</span>;<span class="comment">/*控制content水平居中*/</span></span></span><br><span class="line"><span class="css"><span class="selector-tag">text-align</span>: <span class="selector-tag">center</span>;<span class="comment">/*控制content中的文字水平居中*/</span></span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">    啦啦啦</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p><h2 id="3-特别简单的垂直居中方法-—-inline-block"><a href="#3-特别简单的垂直居中方法-—-inline-block" class="headerlink" title="3.特别简单的垂直居中方法 — inline-block"></a>3.特别简单的垂直居中方法 — inline-block</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">  <span class="selector-class">.wrapper</span> &#123;</span></span><br><span class="line"><span class="undefined">  border: 2px solid red;</span></span><br><span class="line"><span class="undefined">  height: 500px;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.container</span> &#123;</span></span><br><span class="line"><span class="undefined">border: 2px solid blue;</span></span><br><span class="line"><span class="undefined">width: 320px;</span></span><br><span class="line"><span class="undefined">height: 200px;</span></span><br><span class="line"><span class="css"><span class="selector-tag">display</span>: <span class="selector-tag">inline-block</span><span class="comment">/*;*/</span></span></span><br><span class="line"><span class="undefined">vertical-align: middle;</span></span><br><span class="line"><span class="undefined">margin: auto;</span></span><br><span class="line"><span class="undefined">text-align: center;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.content</span> &#123;</span></span><br><span class="line"><span class="undefined">border: 2px solid black;</span></span><br><span class="line"><span class="undefined">width: 200px;</span></span><br><span class="line"><span class="undefined">height: 100px;</span></span><br><span class="line"><span class="undefined">display: inline-block;</span></span><br><span class="line"><span class="undefined">vertical-align: middle;</span></span><br><span class="line"><span class="css"><span class="selector-tag">margin</span>: <span class="selector-tag">auto</span>;<span class="comment">/*控制content水平居中*/</span></span></span><br><span class="line"><span class="css"><span class="selector-tag">text-align</span>: <span class="selector-tag">center</span>;<span class="comment">/*控制content中的文字水平居中*/</span></span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">    啦啦啦</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="4-特别简单的垂直居中方法-—-table-cell"><a href="#4-特别简单的垂直居中方法-—-table-cell" class="headerlink" title="4.特别简单的垂直居中方法 — table-cell"></a>4.特别简单的垂直居中方法 — table-cell</h2><p>这个挺给力！<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">  <span class="selector-class">.wrapper</span> &#123;</span></span><br><span class="line"><span class="undefined">  border: 2px solid red;</span></span><br><span class="line"><span class="undefined">  height: 500px;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.container</span> &#123;</span></span><br><span class="line"><span class="undefined">border: 2px solid blue;</span></span><br><span class="line"><span class="undefined">width: 340px;</span></span><br><span class="line"><span class="undefined">height: 200px;</span></span><br><span class="line"><span class="undefined">display: table;</span></span><br><span class="line"><span class="undefined">margin: auto;</span></span><br><span class="line"><span class="undefined">text-align: center;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.content</span> &#123;</span></span><br><span class="line"><span class="undefined">border: 2px solid black;</span></span><br><span class="line"><span class="undefined">width: 200px;</span></span><br><span class="line"><span class="css"><span class="selector-tag">height</span>: 100<span class="selector-tag">px</span>;<span class="comment">/*外层div display为table 则内层高度、宽度无效，反之则必须指定高度，宽度*/</span></span></span><br><span class="line"><span class="undefined">display: table-cell; </span></span><br><span class="line"><span class="undefined">vertical-align: middle;</span></span><br><span class="line"><span class="css"><span class="selector-tag">margin</span>: <span class="selector-tag">auto</span>;<span class="comment">/*控制content水平居中*/</span></span></span><br><span class="line"><span class="css"><span class="selector-tag">text-align</span>: <span class="selector-tag">center</span>;<span class="comment">/*控制content中的文字水平居中*/</span></span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">    对酒当歌，人生几何？譬如朝露，去日苦多。</span><br><span class="line">慨当以慷，忧思难忘。何以解忧？唯有杜康。</span><br><span class="line">青青子衿，悠悠我心。但为君故，沉吟至今。</span><br><span class="line">呦呦鹿鸣，食野之苹。我有嘉宾，鼓瑟吹笙。</span><br><span class="line">明明如月，何时可辍？忧从中来，不可断绝。</span><br><span class="line">越陌度阡，枉用相存。契阔谈宴，心念旧恩。</span><br><span class="line">月明星稀，乌鹊南飞。绕树三匝，何枝可依？</span><br><span class="line">山不厌高，海不厌深。周公吐哺，天下归心。</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p><h2 id="5-特别简单的垂直居中方法-—-绝对定位"><a href="#5-特别简单的垂直居中方法-—-绝对定位" class="headerlink" title="5.特别简单的垂直居中方法 — 绝对定位"></a>5.特别简单的垂直居中方法 — 绝对定位</h2><p>辣鸡！<br>整个页面居中了！<br>特定情况下使用！<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!doctype html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">  <span class="selector-class">.wrapper</span> &#123;</span></span><br><span class="line"><span class="undefined">  border: 2px solid red;</span></span><br><span class="line"><span class="undefined">  height: 500px;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.container</span> &#123;</span></span><br><span class="line"><span class="undefined">border: 2px solid blue;</span></span><br><span class="line"><span class="undefined">width: 340px;</span></span><br><span class="line"><span class="undefined">height: 200px;</span></span><br><span class="line"><span class="undefined">margin: auto;</span></span><br><span class="line"><span class="undefined">text-align: center;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-class">.content</span> &#123;</span></span><br><span class="line"><span class="undefined">position: absolute;</span></span><br><span class="line"><span class="undefined">border: 2px solid black;</span></span><br><span class="line"><span class="undefined">width: 340px;</span></span><br><span class="line"><span class="undefined">height: 150px;</span></span><br><span class="line"><span class="undefined">top: 0;</span></span><br><span class="line"><span class="undefined">bottom: 0;</span></span><br><span class="line"><span class="undefined">left: 0;</span></span><br><span class="line"><span class="undefined">right: 0;</span></span><br><span class="line"><span class="undefined">margin: auto;</span></span><br><span class="line"><span class="css"><span class="comment">/*text-align: center;控制content中的文字水平居中*/</span></span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined">  </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"wrapper"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span></span><br><span class="line">    对酒当歌，人生几何？譬如朝露，去日苦多。</span><br><span class="line">慨当以慷，忧思难忘。何以解忧？唯有杜康。</span><br><span class="line">青青子衿，悠悠我心。但为君故，沉吟至今。</span><br><span class="line">呦呦鹿鸣，食野之苹。我有嘉宾，鼓瑟吹笙。</span><br><span class="line">明明如月，何时可辍？忧从中来，不可断绝。</span><br><span class="line">越陌度阡，枉用相存。契阔谈宴，心念旧恩。</span><br><span class="line">月明星稀，乌鹊南飞。绕树三匝，何枝可依？</span><br><span class="line">山不厌高，海不厌深。周公吐哺，天下归心。</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p><h2 id="6-特别简单的垂直居中方法-—-各种margin控制"><a href="#6-特别简单的垂直居中方法-—-各种margin控制" class="headerlink" title="6.特别简单的垂直居中方法 — 各种margin控制"></a>6.特别简单的垂直居中方法 — 各种margin控制</h2><p>也不甚好</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ceshi</title>
       <link href="/2016/11/26/ceshi/"/>
       <url>/2016/11/26/ceshi/</url>
@@ -432,6 +470,19 @@
       <url>/2016/11/13/CSS%E6%8F%AD%E7%A7%98%E7%AC%AC%E4%B8%83%E7%AB%A0/</url>
       
         <content type="html"><![CDATA[<h1 id="CSS揭秘第七章"><a href="#CSS揭秘第七章" class="headerlink" title="CSS揭秘第七章"></a>CSS揭秘第七章</h1><h2 id="36-自适应内部元素"><a href="#36-自适应内部元素" class="headerlink" title="36.自适应内部元素"></a>36.自适应内部元素</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">figure</span> &#123;</span><br><span class="line">  <span class="attribute">max-width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">max-width</span>: min-content;</span><br><span class="line">  <span class="attribute">margin</span>: auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">figure</span> &gt; <span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">max-width</span>: inherit;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="40-垂直居中"><a href="#40-垂直居中" class="headerlink" title="40.垂直居中"></a>40.垂直居中</h2><p>最好的解决方案：先给待居中元素的父元素设置display: flex，再给这个元素自身设置margin: auto。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>测试</title>
+      <link href="/2016/11/06/%E6%B5%8B%E8%AF%95/"/>
+      <url>/2016/11/06/%E6%B5%8B%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<p>测试1</p>]]></content>
       
       
       
@@ -465,6 +516,31 @@
     
     
     <entry>
+      <title>记一笔</title>
+      <link href="/2016/10/15/%E8%AE%B0%E4%B8%80%E7%AC%94/"/>
+      <url>/2016/10/15/%E8%AE%B0%E4%B8%80%E7%AC%94/</url>
+      
+        <content type="html"><![CDATA[<p>许久没有更新博客了，也是因为前一阵比较忙的缘故吧。这两天回归正轨，继续在这里写点东西。<br>自己建的网站运行良好，hiahiahia！<br>接触了一个月的前端相关技术，感觉自己慢慢已经有些感觉了。可以一边巩固基础，一边实践着提升一下了，不得不说前端还是很杂的，就像一个大杂烩。但是基础的HTML+CSS+JS核心还是基础，要不断巩固，最近就先从这里开始吧。<br>对了之前发现一个不错的网站叫freecodecamp，很不错的网站，没事的时候在上面写几道，虽然是非常简单的，但是前面的做完后面貌似可以接触到一些实战。很有意思。</p><p>附上今天写的代码，依然觉得很弱B，真是为达目的不择手段。。。题目是删除字符串中的叹号，但是结尾必须有且仅有1个叹号。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">remove</span>(<span class="params">s</span>)</span>&#123;</span><br><span class="line">  <span class="comment">//coding and coding....</span></span><br><span class="line">  <span class="keyword">var</span> arr = [];</span><br><span class="line">  arr = s.split(<span class="string">""</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(arr)</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span> ; i &lt; arr.length ; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(arr[i] == <span class="string">"!"</span>)&#123;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">var</span> j = i; j &lt; arr.length; j++)&#123;</span><br><span class="line">        arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">        <span class="comment">//continue;</span></span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//console.log(arr);</span></span><br><span class="line">    <span class="comment">//i++;</span></span><br><span class="line">  &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span> ; i &lt; arr.length ; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(arr[i] == <span class="string">"!"</span>)&#123;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">var</span> j = i; j &lt; arr.length; j++)&#123;</span><br><span class="line">        arr[j] = arr[j+<span class="number">1</span>];</span><br><span class="line">        <span class="comment">//continue;</span></span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//console.log(arr);</span></span><br><span class="line">    <span class="comment">//i++;</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">console</span>.log(arr);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span> ; i &lt; arr.length; i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(arr[i] == <span class="literal">undefined</span>)&#123;</span><br><span class="line">      arr.length = i;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span>(arr[arr.length<span class="number">-1</span>] != <span class="string">"!"</span>)&#123;</span><br><span class="line">    arr[arr.length] = <span class="string">"!"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> arr.join(<span class="string">""</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>有很多牛逼的写法，我就附上一个我觉着最好的吧。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">remove</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> s.replace(<span class="regexp">/!+/g</span>, <span class="string">''</span>) + <span class="string">'!'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>或者<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> remove = <span class="function"><span class="params">s</span> =&gt;</span> s.replace(<span class="regexp">/!+/g</span>, <span class="string">""</span>)+<span class="string">"!"</span>;</span><br></pre></td></tr></table></figure></p><p>人家只用一行，差距。。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Dairy </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Dairy </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>9月的最后一天</title>
       <link href="/2016/09/30/9%E6%9C%88%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/"/>
       <url>/2016/09/30/9%E6%9C%88%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/</url>
@@ -472,6 +548,56 @@
         <content type="html"><![CDATA[<p>嗯？我的格子又没了？<br>—华丽的分割线—<br>弄好了   坑<br>之前把自己的域名改DNS导向过这里，然后竟然忘了删了。<br>删了一次CNAME竟然还没删掉，不过第二次总算删掉了。<br>今天科目二模拟训练，这个离合油门和刹车，挂挡，要练成习惯。<br>明天详细学习一下bower，深入的了解一下。</p><p>明天就是国庆节啦！</p>]]></content>
       
       
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>近期总结和计划</title>
+      <link href="/2016/09/27/%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93%E5%92%8C%E8%AE%A1%E5%88%92/"/>
+      <url>/2016/09/27/%E8%BF%91%E6%9C%9F%E6%80%BB%E7%BB%93%E5%92%8C%E8%AE%A1%E5%88%92/</url>
+      
+        <content type="html"><![CDATA[<p>算是一篇日记吧，上次写日记也不知是几百年之前。<br>最近干了很多事。<br>从8月中旬在实习结束之后，到现在，短短一个多月时间，感觉自己每天过的都极其充实。<br>我不知道是为什么，突然就变成这样了，很神奇。</p><p>昨天去了移动把实习相关的事情办妥。终于算是把学校的实习了结了。</p><p>报了班学车。科目一已经考完。国庆节科目二就可以学完，之后就简单了，不出意外的话年前可以拿到驾驶证。终于在大四开始的时候学了车，毕竟以后总是要学的，还是早学一点好。</p><p>从8月底开始写博客，打算把自己平时学到的和解决问题的一些方法记录下来。为了自己以后可以看，也为了能帮助做同样事情的人。</p><p>很幸运。投的简历被舒老师选中，跟着舒老师一起做项目。做的是前端，学习了新框架AngularJS，重新拾起javascript以及其他知识。平时和大家一起讨论的感觉非常好，相互帮助，一起成长。最近第二版也已经上线，我也慢慢开始融入这个项目。</p><p>shadowsocks<br>最近自己搭建了一个shadowsocks服务器，也算是一个相对完整的小项目吧，由于涉及到的知识量巨大，反而给予了我充足到的动力。前端，后端，数据库，网站，域名，服务器，操作系统等等，算是对自己所学过的知识做一个整合，并且应用于实践。对自己的技术水平提升颇大，我觉得挺好的。<br>今天下午算是发布了正式版第一版吧，哈哈姑且这么叫。全流程已经跑通，可以使用。接下来打算边强化自己的知识水平，边把网站做得更好，全方面的，一点一点开始做。</p><p>关于我之后的打算：首先还是想读书，也不知道读什么，先把现在读的读完吧，最近空闲时间在读JavaScript高级程序设计和计算机程序设计艺术（这本书太难读了，可能先晾着了）。<br>其次就是做做项目，学学习，写写博客。我也不知道是什么让我一直保持这种状态，总之就是一直保持着，并且干劲还越来越强。<br>虽然我已经知道学习很重要，但是我依然坚定的持有自己的想法，那就是在实践中学习。只有在实践中学习，才能真正学到有用的属于自己的知识。包括英语。从强制自己使用google到现在已经半个月了，加上使用Stack Overflow和Github，感觉自己的英语水平蹭蹭的涨，肉眼可见。</p><p>关于团队。我很早就想组建一个团队，但是这需要机遇。现在很幸运加入了一个很nice的团队，一起做事。虽然之后的路还不明朗，但是可以做好当下的事，之后再看啦！现在团队里的伙伴都非常棒！比我厉害太多了，包括锤老师、舒老师，他们有太多优点值得我去学习。</p><p>关于开源，今天就先不谈了，以后单独写一篇文章说说自己的想法。我觉得开源开始很不错的！</p><p>我现在大四，21岁，即将踏上征程，再此记录一下。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Diary </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Diary </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Shadowsocks服务器搭建</title>
+      <link href="/2016/09/26/Shadowsocks%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/"/>
+      <url>/2016/09/26/Shadowsocks%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA/</url>
+      
+        <content type="html"><![CDATA[<p>服务器已经搭建好了，现在多用户还没有解决。<br>……<br>现在是夜里1点25，我做好了多用户配置，激动！<br>……</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Shadowsocks </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Shadowsocks </tag>
+            
+        </tags>
       
     </entry>
     
@@ -678,6 +804,31 @@
     
     
     <entry>
+      <title>Python安装指南</title>
+      <link href="/2016/09/16/Python%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/"/>
+      <url>/2016/09/16/Python%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Python安装"><a href="#Python安装" class="headerlink" title="Python安装"></a>Python安装</h2><p>首先打开Python的官方网站<a href="http://www.python.org，在Download页面下点击黄色的Download" target="_blank" rel="noopener">www.python.org，在Download页面下点击黄色的Download</a> Python 3.5.2（我安装的时候是3.5.2）。<br>然后找到下载的路径，安装即可。据说默认安装到C盘根目录，但是我默认安装到了一个很奇怪的地方，打开快捷方式属性，找到快捷方式的路径，然后找到根目录即可。</p><ul><li>安装安成后打开命令行输入python，如果显示python版本信息这说明python安装成功。<br>配置环境变量，将python安装路径写到环境变量中</li></ul><h2 id="pip安装"><a href="#pip安装" class="headerlink" title="pip安装"></a>pip安装</h2><p>（先要配置python环境变量）<br>下载pip安装包bootstrap.pypa.io/get-pip.py<br>安装python get-pip.py  </p><h2 id="selenium安装"><a href="#selenium安装" class="headerlink" title="selenium安装"></a>selenium安装</h2><p>pip install selenium</p><h2 id="PyCharm安装"><a href="#PyCharm安装" class="headerlink" title="PyCharm安装"></a>PyCharm安装</h2><p>官网下载<a href="http://www.jetbrains.com" target="_blank" rel="noopener">www.jetbrains.com</a><br>安装</p><h2 id="chrome启动python脚本（windows下）"><a href="#chrome启动python脚本（windows下）" class="headerlink" title="chrome启动python脚本（windows下）"></a>chrome启动python脚本（windows下）</h2><p>首先下载chromedriver，很重要！</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"></span><br><span class="line">chromedriver = <span class="string">"G:chromedriver"</span>  <span class="comment"># 下载 chromedriver 路径</span></span><br><span class="line">os.environ[<span class="string">"webdriver.chrome.driver"</span>] = chromedriver</span><br><span class="line">driver = webdriver.Chrome(chromedriver)</span><br><span class="line"></span><br><span class="line">driver.get(<span class="string">"http://www.baidu.com/"</span>)  <span class="comment"># 网址 URL</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>AngularJS学习笔记</title>
       <link href="/2016/09/12/AngularJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
       <url>/2016/09/12/AngularJS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
@@ -697,6 +848,33 @@
             <tag> 前端 </tag>
             
             <tag> AngularJS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>前端成长之路</title>
+      <link href="/2016/09/10/%E5%89%8D%E7%AB%AF%E6%88%90%E9%95%BF%E4%B9%8B%E8%B7%AF/"/>
+      <url>/2016/09/10/%E5%89%8D%E7%AB%AF%E6%88%90%E9%95%BF%E4%B9%8B%E8%B7%AF/</url>
+      
+        <content type="html"><![CDATA[<p>JavaScript实现</p><ul><li>核心（ECMAScript）</li><li>文档对象模型（DOM）</li><li>浏览器对象模型（BOM）</li></ul><p>web浏览器是ECMAScript实现可能的宿主环境。宿主环境不仅提供ECMAScript实现，同时也会提供该语言的扩展，一边语言与环境之间对接交互。如DOM。其他宿主环境包括Node、Adobe Flash等。</p><p>文档对象模型（DOM，Document Object Model）是针对XML但经过扩展用于HTML的应用编程接口（API，Application Programming Interface）。</p><p>例：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>小例子<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">bode</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">      Hello World!</span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">bode</span>&gt;</span></span><br><span class="line">  </span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure><p>浏览器对象模型（BOM，Browser Object Model）。</p><p>JS是一种转为网页交互而设计的脚本语言。</p><h2 id="元素"><a href="#元素" class="headerlink" title="元素"></a><script>元素</h2><p>在HTML页面中插入JS的主要方法。<script>定义了六个属性：</p><ul><li>async：可选。只适用于外部脚本。</li><li>charset：可选。</li><li>defer：可选。只适用于外部脚本。表明脚本在执行时不会影响页面的构造。即延迟到整个页面都解析完毕后再运行。最好只包含一个延迟脚本。</li><li>language：已废弃。</li><li>src：可选。</li><li>type：可选。</li></ul></script></h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> JavaScript </tag>
             
         </tags>
       
@@ -774,6 +952,19 @@
             <tag> Android </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于Git</title>
+      <link href="/2016/09/07/%E5%85%B3%E4%BA%8EGit/"/>
+      <url>/2016/09/07/%E5%85%B3%E4%BA%8EGit/</url>
+      
+        <content type="html"><![CDATA[<p>还是写下来吧，哈哈，还挺有用的<br>git init<br>git add<br>git commit<br>方法1：<br>git clone 地址<br>git pull origin master<br>git push origin master</p><p>方法2：<br>git remote add origin 地址<br>git pull –rebase origin master     方法2使用此语句有奇效<br>git push origin master</p><p>.gitignore文件中记录着忽略的文件</p><p>git diff查看更改的内容</p>]]></content>
+      
+      
       
     </entry>
     
@@ -901,6 +1092,19 @@
             <tag> Android </tag>
             
         </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>今天是9月5号</title>
+      <link href="/2016/09/05/%E4%BB%8A%E5%A4%A9%E6%98%AF9%E6%9C%885%E5%8F%B7/"/>
+      <url>/2016/09/05/%E4%BB%8A%E5%A4%A9%E6%98%AF9%E6%9C%885%E5%8F%B7/</url>
+      
+        <content type="html"><![CDATA[<font size="22">开学了！</font><p>和媳妇去吃了小吊梨汤，嗯那个虾不错，那个啥糕也不错！</p><p>and我就想问什么情况。我的Java标签页竟然变成了404！<br>找到问题了，因为一开始打错，建了两个标签  一个Java，一个java，后来改的时候把java删了，想统一Java，但是上传到github不管怎么弄，github上的这个文件夹都是java，不得已只能先改成java啦。我觉得这是个bug。</p>]]></content>
+      
+      
       
     </entry>
     
@@ -1085,6 +1289,31 @@
     
     
     <entry>
+      <title>关于java中的this和super</title>
+      <link href="/2016/08/31/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E7%9A%84this%E5%92%8Csuper/"/>
+      <url>/2016/08/31/%E5%85%B3%E4%BA%8Ejava%E4%B8%AD%E7%9A%84this%E5%92%8Csuper/</url>
+      
+        <content type="html"><![CDATA[<p>由于媳妇催着我睡觉，所以只能明天再写了，但是我必须要起个头，关于java中的this关键字和super关键字，大一的时候就不是很理解，后来还特意研究了一下，表面上理解了，但其实还是不太理解，直到今天亲自用到了，才有了深刻的体会。</p><p>关于详细用法等过两天得空补上。</p><p>明天考前最后一天要抓紧复习一下，然后1号2号是考试，赶紧考完就没事了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java成长之路</title>
       <link href="/2016/08/30/Java%E6%88%90%E9%95%BF%E4%B9%8B%E8%B7%AF/"/>
       <url>/2016/08/30/Java%E6%88%90%E9%95%BF%E4%B9%8B%E8%B7%AF/</url>
@@ -1102,6 +1331,44 @@
         <tags>
             
             <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Vim的使用</title>
+      <link href="/2016/08/30/Vim%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+      <url>/2016/08/30/Vim%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<p>vim是一款linux下的文本编辑工具，和windows不一样，它有三种模式，命令模式  插入模式 和编辑模式<br><img src="http://ocpbpzco9.bkt.clouddn.com/Vim%E7%9A%84%E4%BD%BF%E7%94%A8.png" alt="Vim状态转换图"><br>还是图片比较清楚好理解。<br><a id="more"></a></p><h2 id="编辑模式下"><a href="#编辑模式下" class="headerlink" title="编辑模式下"></a>编辑模式下</h2><pre><code>:set number / set nu            显示行数:set nonu                       隐藏行数:n                              定位到第n行</code></pre><h2 id="命令模式下"><a href="#命令模式下" class="headerlink" title="命令模式下"></a>命令模式下</h2><pre><code>x    删除当前光标所在字符nx   删除光标所在处向后n个字符dd   删除一行ndd  删除n行yy和p  复制dd和p  剪切  p大小写，光标上下r/R   替换u    恢复搜索关键字    /关键字   按n查找下一个保存和退出保存退出：wq ZZ不保存退出：q!保存：w强制保存：wq!</code></pre><p>发现一个问题，不会缩进！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>化妆品品牌</title>
+      <link href="/2016/08/29/%E5%8C%96%E5%A6%86%E5%93%81%E5%93%81%E7%89%8C/"/>
+      <url>/2016/08/29/%E5%8C%96%E5%A6%86%E5%93%81%E5%93%81%E7%89%8C/</url>
+      
+        <content type="html"><![CDATA[<p>迪奥（dior）、香奈儿（chanel）、圣罗兰（YSL）、萝卜丁（CL）、（tomford）</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 其他 </tag>
             
         </tags>
       
