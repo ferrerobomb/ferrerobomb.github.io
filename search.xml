@@ -5,25 +5,6 @@
     
     <entry>
       <title>leetcode-面试题68-I二叉搜索树的最近公共祖先</title>
-      <link href="/2020/02/24/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9867-%E6%8A%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0/"/>
-      <url>/2020/02/24/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9867-%E6%8A%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0/</url>
-      
-        <content type="html"><![CDATA[<ul><li><a href="https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/submissions/" target="_blank" rel="noopener">面试题68 - II. 二叉树的最近公共祖先</a></li><li>二叉搜索树特性：若它的左子树不空，则左子树上所有结点的值均小于它的根结点的值； 若它的右子树不空，则右子树上所有结点的值均大于它的根结点的值； 它的左、右子树也分别为二叉排序树。</li><li>解1</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode(object):</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.left = None</span></span><br><span class="line"><span class="comment">#         self.right = None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lowestCommonAncestor</span><span class="params">(self, root, p, q)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type root: TreeNode</span></span><br><span class="line"><span class="string">        :type p: TreeNode</span></span><br><span class="line"><span class="string">        :type q: TreeNode</span></span><br><span class="line"><span class="string">        :rtype: TreeNode</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> root.val &gt; p.val <span class="keyword">and</span> root.val &gt; q.val:</span><br><span class="line">            <span class="keyword">return</span> self.lowestCommonAncestor(root.left, p, q)</span><br><span class="line">        <span class="keyword">elif</span> root.val &lt; p.val <span class="keyword">and</span> root.val &lt; q.val:</span><br><span class="line">            <span class="keyword">return</span> self.lowestCommonAncestor(root.right, p, q)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> root</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> leetcode </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>leetcode-面试题68-I二叉搜索树的最近公共祖先</title>
       <link href="/2020/02/24/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9868-I%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88%20-%20%E5%89%AF%E6%9C%AC/"/>
       <url>/2020/02/24/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9868-I%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88%20-%20%E5%89%AF%E6%9C%AC/</url>
       
@@ -66,6 +47,25 @@
       <url>/2020/02/19/leetcode%E4%B8%AD%E5%9B%BD%E7%89%88%E7%9B%AE%E5%BD%95/</url>
       
         <content type="html"><![CDATA[<h4 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h4><table><thead><tr><th>序号</th><th>题目</th></tr></thead><tbody><tr><td>面试题67</td><td>把字符串转换成整数 <a href="https://leetcode-cn.com/problems/ba-zi-fu-chuan-zhuan-huan-cheng-zheng-shu-lcof/" target="_blank" rel="noopener">题目地址</a> <a href="https://ferrerobomb.github.io/2020/02/19/leetcode-面试题67-把字符串转换成整数/">解法地址</a></td></tr><tr><td>面试题68 - I</td><td>二叉搜索树的最近公共祖先 <a href="https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/submissions/" target="_blank" rel="noopener">题目地址</a> <a href="https://ferrerobomb.github.io/2020/02/19/leetcode-面试题68-I二叉搜索树的最近公共祖先/">解法地址</a></td></tr><tr><td>面试题68 - II</td><td>二叉树的最近公共祖先 <a href="https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/" target="_blank" rel="noopener">题目地址</a> <a href="https://ferrerobomb.github.io/2020/02/24/leetcode-面试题68 - II. 二叉树的最近公共祖先/">解法地址</a></td></tr><tr><td></td><td></td></tr><tr><td></td></tr></tbody></table>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>leetcode-面试题67-把字符串转换成整数</title>
+      <link href="/2020/02/19/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9867-%E6%8A%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0/"/>
+      <url>/2020/02/19/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9867-%E6%8A%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<ul><li><a href="https://leetcode-cn.com/problems/ba-zi-fu-chuan-zhuan-huan-cheng-zheng-shu-lcof/" target="_blank" rel="noopener">面试题67-把字符串转换成整数</a></li><li>解1。耍赖解法</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;string&#125; str</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> strToInt = <span class="function"><span class="keyword">function</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.max(<span class="built_in">Math</span>.min(<span class="built_in">parseInt</span>(str) || <span class="number">0</span>, <span class="number">2147483647</span>), <span class="number">-2147483648</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
       
       
       
