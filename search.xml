@@ -4,6 +4,57 @@
   
     
     <entry>
+      <title>‘coolq机器人和流程自动化</title>
+      <link href="/2020/04/13/%E2%80%98coolq%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%92%8C%E6%B5%81%E7%A8%8B%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+      <url>/2020/04/13/%E2%80%98coolq%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%92%8C%E6%B5%81%E7%A8%8B%E8%87%AA%E5%8A%A8%E5%8C%96/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>第二本书《活着》</title>
+      <link href="/2020/04/13/%E7%AC%AC%E4%BA%8C%E6%9C%AC%E4%B9%A6%E3%80%8A%E6%B4%BB%E7%9D%80%E3%80%8B/"/>
+      <url>/2020/04/13/%E7%AC%AC%E4%BA%8C%E6%9C%AC%E4%B9%A6%E3%80%8A%E6%B4%BB%E7%9D%80%E3%80%8B/</url>
+      
+        <content type="html"><![CDATA[<p>只是很平淡的讲述了福贵多灾多难的一生，算是开始能够从文字中体会到一些当时的情景，有些灾难还是很可怕。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> note </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>终于正式读完了人生的第一本书</title>
+      <link href="/2020/02/27/MongoDBAtlas/"/>
+      <url>/2020/02/27/MongoDBAtlas/</url>
+      
+        <content type="html"><![CDATA[<p>终于读完了《乔布斯传》，用了……2年？</p><p>开始选下一本书。</p><p>想写点什么，但是又不会写。乔布斯是一个伟大的人，他创造了伟大的产品，改变了世界。他身上有种种优点，和种种缺点。他一生都在追随者自己内心的想法走，和种种偶然的成功不一样，他的成功，是一种必然。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> note </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>终于正式读完了人生的第一本书</title>
       <link href="/2020/02/27/%E7%BB%88%E4%BA%8E%E6%AD%A3%E5%BC%8F%E8%AF%BB%E5%AE%8C%E4%BA%86%E4%BA%BA%E7%94%9F%E7%9A%84%E7%AC%AC%E4%B8%80%E6%9C%AC%E4%B9%A6/"/>
       <url>/2020/02/27/%E7%BB%88%E4%BA%8E%E6%AD%A3%E5%BC%8F%E8%AF%BB%E5%AE%8C%E4%BA%86%E4%BA%BA%E7%94%9F%E7%9A%84%E7%AC%AC%E4%B8%80%E6%9C%AC%E4%B9%A6/</url>
@@ -176,8 +227,8 @@
     
     <entry>
       <title>leetcode-面试题55-II-平衡二叉树</title>
-      <link href="/2020/02/15/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9855-II-%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
-      <url>/2020/02/15/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9855-II-%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
+      <link href="/2020/02/15/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9830-%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/"/>
+      <url>/2020/02/15/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9830-%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/</url>
       
         <content type="html"><![CDATA[<ul><li><a href="https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof" target="_blank" rel="noopener">平衡二叉树</a></li><li>解1</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;TreeNode&#125; root</span></span><br><span class="line"><span class="comment"> * @return &#123;boolean&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> isBalanced = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (root === <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> left = root.left;</span><br><span class="line">    <span class="keyword">let</span> right = root.right;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">Math</span>.abs(height(left) - height(right)) &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> isBalanced(root.left) &amp;&amp; isBalanced(root.right)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> height = <span class="function">(<span class="params">root</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (root === <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span> + <span class="built_in">Math</span>.max(height(root.left), height(root.right));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       
@@ -195,8 +246,8 @@
     
     <entry>
       <title>leetcode-面试题55-II-平衡二叉树</title>
-      <link href="/2020/02/15/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9830-%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/"/>
-      <url>/2020/02/15/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9830-%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/</url>
+      <link href="/2020/02/15/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9855-II-%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+      <url>/2020/02/15/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9855-II-%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
       
         <content type="html"><![CDATA[<ul><li><a href="https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof" target="_blank" rel="noopener">平衡二叉树</a></li><li>解1</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;TreeNode&#125; root</span></span><br><span class="line"><span class="comment"> * @return &#123;boolean&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> isBalanced = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (root === <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> left = root.left;</span><br><span class="line">    <span class="keyword">let</span> right = root.right;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">Math</span>.abs(height(left) - height(right)) &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> isBalanced(root.left) &amp;&amp; isBalanced(root.right)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> height = <span class="function">(<span class="params">root</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (root === <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span> + <span class="built_in">Math</span>.max(height(root.left), height(root.right));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       
@@ -249,7 +300,7 @@
       <link href="/2020/02/12/2020%E5%B9%B42%E6%9C%8811%E6%97%A5-%E6%AF%8F%E6%97%A5%E6%B5%81%E6%B0%B4%E8%AE%B0%E8%B4%A6/"/>
       <url>/2020/02/12/2020%E5%B9%B42%E6%9C%8811%E6%97%A5-%E6%AF%8F%E6%97%A5%E6%B5%81%E6%B0%B4%E8%AE%B0%E8%B4%A6/</url>
       
-        <content type="html"><![CDATA[<ul><li>拒绝浪费生命^_^</li><li>2020年2月11日 day2<ul><li>读书30m</li><li>学英语20m</li><li>健身1m</li><li><del>今天荒废了一天</del></li><li><del>今天荒废了一天</del></li></ul></li><li>2020年2月12日 day3<ul><li>学英语20m+</li><li>读书30m</li><li><del>今天荒废了一天</del></li></ul></li><li>2020年2月13日 day4<ul><li>学英语20m+</li><li>没读书</li></ul></li><li>2020年2月14日 day5<ul><li>学英语10m+</li><li>没读书</li></ul></li><li>2020年2月15日 day6<ul><li>学英语20m+</li><li>读书30m+，整本书都在说乔布斯是一个粗鲁，不谙世事的人</li><li>整理了<a href="https://ferrerobomb.github.io/2019/04/01/%E8%B6%85%E7%BA%A7%E7%B4%A2%E5%BC%95%E8%AE%A1%E5%88%92/">索引表</a>，加了一些网站,看了一下置顶功能，先不加了</li></ul></li><li><p>2020年2月16日 day7</p><ul><li>学英语20m+</li><li>读书30m+</li></ul></li><li><p>2020年2月17日 day8</p><ul><li>读书任务√</li><li>学英语任务√</li></ul></li><li><p>2020年2月18日 day9</p><ul><li>读书任务√</li><li>学英语任务√</li></ul></li><li><p>2020年2月19日 day10</p><ul><li>读书任务√</li><li>学英语任务√</li><li>leetcode√</li></ul></li><li>2020年2月20日 day11<ul><li>学英语任务√</li></ul></li><li>2020年2月21日 day12<ul><li>学英语任务√</li></ul></li><li>2020年2月22日 day13<ul><li>学英语任务√ </li></ul></li><li>2020年2月23日 day14<ul><li>学英语任务√ </li><li>leetcode√ </li></ul></li><li>2020年2月24日 day15<ul><li>学英语任务√ </li><li>leetcode√ </li></ul></li><li>2020年2月25日 day16<ul><li>学英语任务√ </li><li>leetcode√ </li></ul></li><li>2020年2月26日 day17<ul><li>学英语任务√ </li><li>leetcode√ </li></ul></li><li>2020年2月27日 day18<ul><li>学英语任务√ </li><li>leetcode√ </li><li>读书人物√ 。</li></ul></li></ul>]]></content>
+        <content type="html"><![CDATA[<ul><li><p>拒绝浪费生命^_^</p></li><li><p>2020年2月11日 day2</p><ul><li>读书30m</li><li>学英语20m</li><li>健身1m</li><li><del>今天荒废了一天</del></li><li><del>今天荒废了一天</del></li></ul></li><li><p>2020年2月12日 day3</p><ul><li>学英语20m+</li><li>读书30m</li><li><del>今天荒废了一天</del></li></ul></li><li><p>2020年2月13日 day4</p><ul><li>学英语20m+</li><li>没读书</li></ul></li><li><p>2020年2月14日 day5</p><ul><li>学英语10m+</li><li>没读书</li></ul></li><li><p>2020年2月15日 day6</p><ul><li>学英语20m+</li><li>读书30m+，整本书都在说乔布斯是一个粗鲁，不谙世事的人</li><li>整理了<a href="https://ferrerobomb.github.io/2019/04/01/%E8%B6%85%E7%BA%A7%E7%B4%A2%E5%BC%95%E8%AE%A1%E5%88%92/">索引表</a>，加了一些网站,看了一下置顶功能，先不加了</li></ul></li><li><p>2020年2月16日 day7</p><ul><li>学英语20m+</li><li>读书30m+</li></ul></li><li><p>2020年2月17日 day8</p><ul><li>读书任务√</li><li>学英语任务√</li></ul></li><li><p>2020年2月18日 day9</p><ul><li>读书任务√</li><li>学英语任务√</li></ul></li><li><p>2020年2月19日 day10</p><ul><li>读书任务√</li><li>学英语任务√</li><li>leetcode√</li></ul></li><li><p>2020年2月20日 day11</p><ul><li>学英语任务√</li></ul></li><li><p>2020年2月21日 day12</p><ul><li>学英语任务√</li></ul></li><li><p>2020年2月22日 day13</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年2月23日 day14</p><ul><li>学英语任务√ </li><li>leetcode√ </li></ul></li><li><p>2020年2月24日 day15</p><ul><li>学英语任务√ </li><li>leetcode√ </li></ul></li><li><p>2020年2月25日 day16</p><ul><li>学英语任务√ </li><li>leetcode√ </li></ul></li><li><p>2020年2月26日 day17</p><ul><li>学英语任务√ </li><li>leetcode√ </li></ul></li><li><p>2020年2月27日 day18</p><ul><li>学英语任务√ </li><li>leetcode√ </li><li>读书任务√ 。<a href="https://ferrerobomb.github.io/2020/02/27/终于正式读完了人生的第一本书/">note</a></li></ul></li><li><p>2020年2月28日 day19</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年2月29日 day20</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月1日 day21</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月2日 day22</p><ul><li><h3 id="今天荒废了一天"><a href="#今天荒废了一天" class="headerlink" title="今天荒废了一天"></a>今天荒废了一天</h3></li></ul></li><li><p>2020年3月3日 day23</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月4日 day24</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月5日 day25</p><ul><li><h3 id="今天荒废了一天-1"><a href="#今天荒废了一天-1" class="headerlink" title="今天荒废了一天"></a>今天荒废了一天</h3></li></ul></li><li><p>2020年3月6日 day26</p><ul><li><h3 id="今天荒废了一天-2"><a href="#今天荒废了一天-2" class="headerlink" title="今天荒废了一天"></a>今天荒废了一天</h3></li></ul></li><li><p>2020年3月7日 day27</p><ul><li><h3 id="今天荒废了一天-3"><a href="#今天荒废了一天-3" class="headerlink" title="今天荒废了一天"></a>今天荒废了一天</h3></li></ul></li><li><p>2020年3月8日 day28</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月9日 day29</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月10日 day30</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月11日 day31</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月12日 day32</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月13日 day33</p><ul><li><h3 id="今天荒废了一天-4"><a href="#今天荒废了一天-4" class="headerlink" title="今天荒废了一天"></a>今天荒废了一天</h3></li></ul></li><li><p>2020年3月14日 day34</p><ul><li><h3 id="今天荒废了一天-5"><a href="#今天荒废了一天-5" class="headerlink" title="今天荒废了一天"></a>今天荒废了一天</h3></li></ul></li></ul>]]></content>
       
       
       
@@ -1018,9 +1069,9 @@
       
         <tags>
             
-            <tag> 前端 </tag>
-            
             <tag> JavaScript </tag>
+            
+            <tag> 前端 </tag>
             
         </tags>
       
