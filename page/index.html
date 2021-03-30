@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test1</title>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+	<style>
+		body {
+			background: #e9ecef;
+			height:100%;
+			width:100%;
+			overflow: hidden;
+			background-size:100%;
+		}
+	</style>
+</head>
+<body>
+
+<div id="root"></div>
+<script type="text/babel">
+  class App extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        board: [],
+
+      }
+    }
+
+    updateBoard = (board, click) => {
+      function countMine(i, j) {
+        console.log(board);
+        console.log(i,j);
+        let count = 0;
+        for (let a = i - 1; a <= i + 1; a++) {
+          for (let b = j - 1; b <= j + 1; b++) {
+            if (board[a] && board[a][b] && board[a][b].value === 'M') count++
+          }
+        }
+        return count
+      }
+
+      function iter(i, j) {
+        board[i][j].visibility = 'inherit';
+        if (board[i] == null && board[i][j] == null) return;
+        if (board[i][j].value === 'M') board[i][j].value = 'X';
+        else {
+          const count = countMine(i, j);
+          if (count > 0) board[i][j].value = '' + count;
+          else {
+            board[i][j].value = 'B';
+            for (let a = i - 1; a <= i + 1; a++) {
+              for (let b = j - 1; b <= j + 1; b++) {
+                if (board[a] && board[a][b] && board[a][b].value === 'E') iter(a, b)
+              }
+            }
+          }
+        }
+      }
+
+      iter(click[0], click[1]);
+      return this.setState({
+        board: board,
+      })
+    };
+
+    render() {
+      return <div>
+        <h2>这个页面要设计一下</h2>
+        <div>存储室1:扫雷(很早之前写的，等待优化)</div>
+        <h3>扫雷小游戏</h3>
+        <button onClick={() => {
+          let rowCol = Math.floor(Math.random() * 20 + 3);
+          var arr = new Array(rowCol);   //表格有10行
+          let col = rowCol;
+          let mineNumber = rowCol+2;
+          for (let i = 0; i < arr.length; i++) {
+            arr[i] = new Array(col);    //每行有10列
+          }
+          for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+              arr[i][j] = {
+                value: 'E',
+                visibility: 'hidden',
+              };    //每行有10列
+            }
+          }
+          console.log(rowCol);
+          console.log(mineNumber);
+          for (let j = 0; j < mineNumber; j++) {
+            let a = Math.floor(Math.random() * rowCol);
+            let b = Math.floor(Math.random() * rowCol);
+            console.log(a, b);
+            arr[a][b] = {
+              value: 'M',
+              visibility: 'hidden',
+            };    //每行有10列
+          }
+          // arr.forEach(row=>row.forEach(col=>col='M'));
+          console.log(arr);
+          this.setState({
+            board: arr
+          });
+        }} style={{margin: '10px 0'}}>开始</button>
+        <div>
+          <div style={{borderTop: '1px solid #000',borderLeft: '1px solid #000',display: 'inline-block'}}>
+            {
+              this.state.board.map((row, rowIndex) => <div key={rowIndex}>
+                {row.map((col, colIndex) =>
+                  <div key={rowIndex+'/'+colIndex} onClick={()=>this.updateBoard(this.state.board,[rowIndex,colIndex])}
+                       style={{display: 'inline-block', padding: '0 0px',borderBottom: '1px solid #000',
+                         borderRight: '1px solid #000',width: 22,textAlign: 'center'}}>
+                    <span style={{visibility: col.visibility}}>{col.value}</span>
+                  </div>)}
+              </div>)
+            }
+          </div>
+        </div>
+
+
+      </div>
+    }
+  }
+  ReactDOM.render(<App/>, document.getElementById('root'))
+</script>
+
+</body>
+
+</html>

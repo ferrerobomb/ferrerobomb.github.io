@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>橙柚养乐多的博客</title>
+  
+  <subtitle>每日任务表：读书、学英语、看新闻</subtitle>
+  <link href="/rss.xml" rel="self"/>
+  
+  <link href="https://ferrerobomb.github.io/"/>
+  <updated>2019-03-29T17:06:58.000Z</updated>
+  <id>https://ferrerobomb.github.io/</id>
+  
+  <author>
+    <name>橙柚养乐多</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://ferrerobomb.github.io/2021/03/30/hello-world/"/>
+    <id>https://ferrerobomb.github.io/2021/03/30/hello-world/</id>
+    <published>2021-03-30T14:33:11.580Z</published>
+    <updated>2019-03-29T17:06:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>重新拾起</title>
+    <link href="https://ferrerobomb.github.io/2021/03/30/2021%E5%B9%B403%E6%9C%8830%E6%97%A5%E9%87%8D%E6%96%B0%E6%8B%BE%E8%B5%B7/"/>
+    <id>https://ferrerobomb.github.io/2021/03/30/2021年03月30日重新拾起/</id>
+    <published>2021-03-30T12:33:32.000Z</published>
+    <updated>2021-03-30T15:55:20.640Z</updated>
+    
+    <content type="html"><![CDATA[<p>【文章链接】<br>之前那篇多终端同步有点小小的问题要修改一下。</p><ul><li>记录一下这个mac这次拾起遇到的问题<br>在外层博客模板项目拉取时遇到问题 git pull 失败，<br>报错GitHub: Permission denied (publickey). fatal: Could not read from remote repository blablabla<br>【原因】<br>【解决方法】<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for https protocol</span><br><span class="line">git remote set-url origin https://github.com/username/repository.git</span><br><span class="line">for ssh protocol</span><br><span class="line">git remote set-url origin git@github.com:username/repository.git</span><br></pre></td></tr></table></figure></li></ul><p>第二步又遇到问题<br>内层公开博客项目拉取失败。同样的报错<br>这回上面的不管用了。研究了一下是ssh key的问题，于是把本mac上的id_rsa.pub去博客项目github账号里new了一个ssh。就好了</p><p>下面进行下一步 更新博客操作。这篇文章就是测试文。</p><ul><li>测试失败<br>好了测试失败。实际结果出现了问题，虽然新的提交更新上去了，但是不熟之后丢失了大量文章。直接去模板仓库看了一下发现仓库居然不是全的，于是思考这是怎么回事。</li></ul><p>虽然在19年确实重建了博客，但是之前的也做过迁移了。应该是迁移在另一台电脑做的，没有上传的问题。所以换个电脑再试试</p><p>好了现在来到了新电脑。<br>刚刚发生了惊悚事件！<br>本地新建了一个仓库直接push到线上  直接把git仓库覆盖了 ，令人窒息的操作，还好有备份<br>备份真的很重要，还有就是使用git push -f一定要谨慎，尤其是和别人合作的时候，我这个自己一个人维护的 还好</p><p>又遇到错误 部署的时候<br>FATAL Something’s wrong. Maybe you can find the solution here: <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">https://hexo.io/docs/troubleshooting.html</a><br>TypeError [ERR_INVALID_ARG_TYPE]: The “mode” argument must be integer. Received an instance of Object<br>【原因】是由于node版本过高导致<br>【解决】删除node14 下载node12<br>【想法】这有点不行，居然不能支持新版本 得想想办法</p><p>node版本切换到12，问题解决，重新上传这个新文件试试。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>‘coolq机器人和流程自动化</title>
+    <link href="https://ferrerobomb.github.io/2020/04/13/%E2%80%98coolq%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%92%8C%E6%B5%81%E7%A8%8B%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    <id>https://ferrerobomb.github.io/2020/04/13/‘coolq机器人和流程自动化/</id>
+    <published>2020-04-13T07:41:58.000Z</published>
+    <updated>2020-04-13T07:42:00.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>第二本书《活着》</title>
+    <link href="https://ferrerobomb.github.io/2020/04/13/%E7%AC%AC%E4%BA%8C%E6%9C%AC%E4%B9%A6%E3%80%8A%E6%B4%BB%E7%9D%80%E3%80%8B/"/>
+    <id>https://ferrerobomb.github.io/2020/04/13/第二本书《活着》/</id>
+    <published>2020-04-13T07:39:01.000Z</published>
+    <updated>2020-04-13T07:40:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>只是很平淡的讲述了福贵多灾多难的一生，算是开始能够从文字中体会到一些当时的情景，有些灾难还是很可怕。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="note" scheme="https://ferrerobomb.github.io/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MongoDBAtlas</title>
+    <link href="https://ferrerobomb.github.io/2020/02/27/MongoDBAtlas/"/>
+    <id>https://ferrerobomb.github.io/2020/02/27/MongoDBAtlas/</id>
+    <published>2020-02-27T09:07:37.000Z</published>
+    <updated>2020-04-13T09:00:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>MongoDBAtlas</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="note" scheme="https://ferrerobomb.github.io/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>终于正式读完了人生的第一本书</title>
+    <link href="https://ferrerobomb.github.io/2020/02/27/%E7%BB%88%E4%BA%8E%E6%AD%A3%E5%BC%8F%E8%AF%BB%E5%AE%8C%E4%BA%86%E4%BA%BA%E7%94%9F%E7%9A%84%E7%AC%AC%E4%B8%80%E6%9C%AC%E4%B9%A6/"/>
+    <id>https://ferrerobomb.github.io/2020/02/27/终于正式读完了人生的第一本书/</id>
+    <published>2020-02-27T09:07:37.000Z</published>
+    <updated>2020-02-27T09:12:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>终于读完了《乔布斯传》，用了……2年？</p><p>开始选下一本书。</p><p>想写点什么，但是又不会写。乔布斯是一个伟大的人，他创造了伟大的产品，改变了世界。他身上有种种优点，和种种缺点。他一生都在追随者自己内心的想法走，和种种偶然的成功不一样，他的成功，是一种必然。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="note" scheme="https://ferrerobomb.github.io/tags/note/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode-94/144/145-二叉树的遍历</title>
+    <link href="https://ferrerobomb.github.io/2020/02/26/leetcode-94-144-145-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/"/>
+    <id>https://ferrerobomb.github.io/2020/02/26/leetcode-94-144-145-二叉树的遍历/</id>
+    <published>2020-02-26T07:56:33.000Z</published>
+    <updated>2020-02-26T08:37:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://leetcode-cn.com/problems/binary-tree-preorder-traversal" target="_blank" rel="noopener">二叉树的前序遍历</a></li><li>解1.递归</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;TreeNode&#125; root</span></span><br><span class="line"><span class="comment"> * @return &#123;number[]&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> preorderTraversal = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> root? [root.val, ...preorderTraversal(root.left), ...preorderTraversal(root.right)] : [];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><ul><li>解2.迭代</li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> preorderTraversal = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> stack = [];</span><br><span class="line">    <span class="keyword">let</span> result = [];</span><br><span class="line">    <span class="keyword">if</span> (root) &#123;</span><br><span class="line">        stack.push(root)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(stack.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> node = stack.pop()</span><br><span class="line">        result.push(node.val)</span><br><span class="line">        <span class="keyword">if</span> (node.right) &#123;</span><br><span class="line">        stack.push(node.right)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (node.left) &#123;</span><br><span class="line">        stack.push(node.left)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><ul><li><a href="https://leetcode-cn.com/problems/binary-tree-inorder-traversal" target="_blank" rel="noopener">二叉树的中序遍历</a></li><li>解1.递归</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;TreeNode&#125; root</span></span><br><span class="line"><span class="comment"> * @return &#123;number[]&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> inorderTraversal = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> root? [...inorderTraversal(root.left), root.val, ...inorderTraversal(root.right)] : [];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><ul><li><a href="https://leetcode-cn.com/problems/binary-tree-postorder-traversal" target="_blank" rel="noopener">二叉树的后序遍历</a></li><li>解1.递归</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;TreeNode&#125; root</span></span><br><span class="line"><span class="comment"> * @return &#123;number[]&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> postorderTraversal = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> root? [...postorderTraversal(root.left), ...postorderTraversal(root.right), root.val] : [];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><ul><li>解2.前序遍历稍作修改</li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;TreeNode&#125; root</span></span><br><span class="line"><span class="comment"> * @return &#123;number[]&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> postorderTraversal = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> stack = [];</span><br><span class="line">    <span class="keyword">let</span> result = [];</span><br><span class="line">    <span class="keyword">if</span> (root) &#123;</span><br><span class="line">        stack.push(root)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(stack.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">let</span> node = stack.pop()</span><br><span class="line">        result.push(node.val)</span><br><span class="line">        <span class="keyword">if</span> (node.left) &#123;</span><br><span class="line">        stack.push(node.left)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (node.right) &#123;</span><br><span class="line">        stack.push(node.right)</span><br><span class="line">        &#125;       </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result.reverse()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://ferrerobomb.github.io/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode-面试题32-II-从上到下打印二叉树II</title>
+    <link href="https://ferrerobomb.github.io/2020/02/25/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9832-II-%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91II/"/>
+    <id>https://ferrerobomb.github.io/2020/02/25/leetcode-面试题32-II-从上到下打印二叉树II/</id>
+    <published>2020-02-25T04:15:05.000Z</published>
+    <updated>2020-02-25T04:17:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-ii-lcof" target="_blank" rel="noopener">从上到下打印二叉树 II</a></li><li>解1。用另一题稍作修改</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;TreeNode&#125; root</span></span><br><span class="line"><span class="comment"> * @return &#123;number[][]&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> levelOrder = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!root) &#123;</span><br><span class="line">        <span class="keyword">return</span> [];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> result = [];</span><br><span class="line">    <span class="keyword">let</span> row = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">let</span> queue = [root];</span><br><span class="line">    <span class="keyword">while</span> (queue.length) &#123;</span><br><span class="line">        <span class="keyword">let</span> rowArr = [];</span><br><span class="line">        <span class="keyword">let</span> length = queue.length</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; length;i++) &#123;</span><br><span class="line">            <span class="keyword">let</span> node = queue.shift();</span><br><span class="line">            <span class="keyword">if</span> (row % <span class="number">2</span> === <span class="number">1</span>) &#123;</span><br><span class="line">                rowArr.push(node.val);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                rowArr.push(node.val);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(node.left) queue.push(node.left);</span><br><span class="line">            <span class="keyword">if</span>(node.right) queue.push(node.right);</span><br><span class="line">        &#125;</span><br><span class="line">        result.push(rowArr);</span><br><span class="line">        row++</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://ferrerobomb.github.io/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode-面试题68-I二叉搜索树的最近公共祖先</title>
+    <link href="https://ferrerobomb.github.io/2020/02/24/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9868-I%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/"/>
+    <id>https://ferrerobomb.github.io/2020/02/24/leetcode-面试题68-I二叉搜索树的最近公共祖先/</id>
+    <published>2020-02-24T08:29:36.000Z</published>
+    <updated>2020-02-25T03:54:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/submissions/" target="_blank" rel="noopener">面试题68 - II. 二叉搜索树的最近公共祖先</a></li><li>二叉搜索树特性：若它的左子树不空，则左子树上所有结点的值均小于它的根结点的值； 若它的右子树不空，则右子树上所有结点的值均大于它的根结点的值； 它的左、右子树也分别为二叉排序树。</li><li>解1</li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode(object):</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.left = None</span></span><br><span class="line"><span class="comment">#         self.right = None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lowestCommonAncestor</span><span class="params">(self, root, p, q)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type root: TreeNode</span></span><br><span class="line"><span class="string">        :type p: TreeNode</span></span><br><span class="line"><span class="string">        :type q: TreeNode</span></span><br><span class="line"><span class="string">        :rtype: TreeNode</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> root.val &gt; p.val <span class="keyword">and</span> root.val &gt; q.val:</span><br><span class="line">            <span class="keyword">return</span> self.lowestCommonAncestor(root.left, p, q)</span><br><span class="line">        <span class="keyword">elif</span> root.val &lt; p.val <span class="keyword">and</span> root.val &lt; q.val:</span><br><span class="line">            <span class="keyword">return</span> self.lowestCommonAncestor(root.right, p, q)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> root</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://ferrerobomb.github.io/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode-面试题68 - II. 二叉树的最近公共祖先</title>
+    <link href="https://ferrerobomb.github.io/2020/02/19/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9868-II%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/"/>
+    <id>https://ferrerobomb.github.io/2020/02/19/leetcode-面试题68-II二叉树的最近公共祖先/</id>
+    <published>2020-02-19T15:45:03.000Z</published>
+    <updated>2020-02-19T15:45:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><h4 id="面试题68-II-二叉树的最近公共祖先"><a href="#面试题68-II-二叉树的最近公共祖先" class="headerlink" title="面试题68 - II. 二叉树的最近公共祖先"></a><a href="https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/" target="_blank" rel="noopener">面试题68 - II. 二叉树的最近公共祖先</a></h4></li><li><h4 id="解1："><a href="#解1：" class="headerlink" title="解1："></a>解1：</h4></li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> lowestCommonAncestor = <span class="function"><span class="keyword">function</span>(<span class="params">root, p, q</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// console.log(root, p, q);</span></span><br><span class="line">    <span class="keyword">if</span> (!root || root === p || root === q) &#123;</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> left = lowestCommonAncestor(root.left,p,q);</span><br><span class="line">    <span class="keyword">let</span> right = lowestCommonAncestor(root.right,p,q);</span><br><span class="line">    <span class="keyword">if</span> (!left) <span class="keyword">return</span> right;</span><br><span class="line">    <span class="keyword">if</span> (!right) <span class="keyword">return</span> left;</span><br><span class="line">    <span class="keyword">return</span> root;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://ferrerobomb.github.io/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode中国版目录</title>
+    <link href="https://ferrerobomb.github.io/2020/02/19/leetcode%E4%B8%AD%E5%9B%BD%E7%89%88%E7%9B%AE%E5%BD%95/"/>
+    <id>https://ferrerobomb.github.io/2020/02/19/leetcode中国版目录/</id>
+    <published>2020-02-19T15:44:03.000Z</published>
+    <updated>2020-02-26T08:00:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h4><table><thead><tr><th>序号</th><th>题目</th></tr></thead><tbody><tr><td>94</td><td><a href="https://leetcode-cn.com/problems/binary-tree-inorder-traversal" target="_blank" rel="noopener">二叉树的中序遍历</a> <a href="https://ferrerobomb.github.io/2020/02/26/leetcode-94-144-145-二叉树的遍历/">解法地址</a></td></tr><tr><td>144</td><td><a href="https://leetcode-cn.com/problems/binary-tree-preorder-traversal" target="_blank" rel="noopener">二叉树的前序遍历</a> <a href="https://ferrerobomb.github.io/2020/02/26/leetcode-94-144-145-二叉树的遍历/">解法地址</a></td></tr><tr><td>145</td><td><a href="https://leetcode-cn.com/problems/binary-tree-postorder-traversal" target="_blank" rel="noopener">二叉树的后序遍历</a> <a href="https://ferrerobomb.github.io/2020/02/26/leetcode-94-144-145-二叉树的遍历/">解法地址</a></td></tr><tr><td>面试题30</td><td><a href="https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof" target="_blank" rel="noopener">包含min函数的栈</a> <a href="https://ferrerobomb.github.io/2020/02/15/leetcode-面试题30-包含min函数的栈/">解法地址</a></td></tr><tr><td>面试题32 - II</td><td><a href="https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-ii-lcof" target="_blank" rel="noopener">从上到下打印二叉树 II</a> <a href="https://ferrerobomb.github.io/2020/02/25/leetcode-面试题32-II-从上到下打印二叉树II/">解法地址</a></td></tr><tr><td>面试题32 - III</td><td><a href="https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof" target="_blank" rel="noopener">从上到下打印二叉树 III</a> <a href="https://ferrerobomb.github.io/2020/02/18/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9832-III-%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91III/">解法地址</a></td></tr><tr><td>面试题37</td><td><a href="https://leetcode-cn.com/problems/xu-lie-hua-er-cha-shu-lcof" target="_blank" rel="noopener">序列化二叉树</a> <a href="https://ferrerobomb.github.io/2020/02/17/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9837-%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91/">解法地址</a></td></tr><tr><td>面试题55 - II</td><td><a href="https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof" target="_blank" rel="noopener">平衡二叉树</a> <a href="https://ferrerobomb.github.io/2020/02/15/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9855-II-%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/">解法地址</a></td></tr><tr><td>面试题67</td><td>把字符串转换成整数 <a href="https://leetcode-cn.com/problems/ba-zi-fu-chuan-zhuan-huan-cheng-zheng-shu-lcof/" target="_blank" rel="noopener">题目地址</a> <a href="https://ferrerobomb.github.io/2020/02/19/leetcode-面试题67-把字符串转换成整数/">解法地址</a></td></tr><tr><td>面试题68 - I</td><td>二叉搜索树的最近公共祖先 <a href="https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/submissions/" target="_blank" rel="noopener">题目地址</a> <a href="https://ferrerobomb.github.io/2020/02/24/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9868-I%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/">解法地址</a></td></tr><tr><td>面试题68 - II</td><td>二叉树的最近公共祖先 <a href="https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/" target="_blank" rel="noopener">题目地址</a> <a href="https://ferrerobomb.github.io/2020/02/19/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9868-II%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/">解法地址</a></td></tr><tr><td></td><td></td></tr><tr><td></td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://ferrerobomb.github.io/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode-面试题67-把字符串转换成整数</title>
+    <link href="https://ferrerobomb.github.io/2020/02/19/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9867-%E6%8A%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0/"/>
+    <id>https://ferrerobomb.github.io/2020/02/19/leetcode-面试题67-把字符串转换成整数/</id>
+    <published>2020-02-19T08:29:36.000Z</published>
+    <updated>2020-02-24T10:23:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://leetcode-cn.com/problems/ba-zi-fu-chuan-zhuan-huan-cheng-zheng-shu-lcof/" target="_blank" rel="noopener">面试题67-把字符串转换成整数</a></li><li>解1。耍赖解法</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;string&#125; str</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> strToInt = <span class="function"><span class="keyword">function</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.max(<span class="built_in">Math</span>.min(<span class="built_in">parseInt</span>(str) || <span class="number">0</span>, <span class="number">2147483647</span>), <span class="number">-2147483648</span>)</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://ferrerobomb.github.io/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode-面试题32-III-从上到下打印二叉树III</title>
+    <link href="https://ferrerobomb.github.io/2020/02/18/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9832-III-%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91III/"/>
+    <id>https://ferrerobomb.github.io/2020/02/18/leetcode-面试题32-III-从上到下打印二叉树III/</id>
+    <published>2020-02-18T03:54:09.000Z</published>
+    <updated>2020-02-25T03:55:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof" target="_blank" rel="noopener">从上到下打印二叉树 III</a></li><li>解1</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;TreeNode&#125; root</span></span><br><span class="line"><span class="comment"> * @return &#123;number[][]&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> levelOrder = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!root) &#123;</span><br><span class="line">        <span class="keyword">return</span> [];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> result = [];</span><br><span class="line">    <span class="keyword">let</span> row = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">let</span> queue = [root];</span><br><span class="line">    <span class="keyword">while</span> (queue.length) &#123;</span><br><span class="line">        <span class="keyword">let</span> rowArr = [];</span><br><span class="line">        <span class="keyword">let</span> length = queue.length</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; length;i++) &#123;</span><br><span class="line">            <span class="keyword">let</span> node = queue.shift();</span><br><span class="line">            <span class="keyword">if</span> (row % <span class="number">2</span> === <span class="number">1</span>) &#123;</span><br><span class="line">                rowArr.push(node.val);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                rowArr.unshift(node.val);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(node.left) queue.push(node.left);</span><br><span class="line">            <span class="keyword">if</span>(node.right) queue.push(node.right);</span><br><span class="line">        &#125;</span><br><span class="line">        result.push(rowArr);</span><br><span class="line">        row++</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://ferrerobomb.github.io/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode-面试题37-序列化二叉树</title>
+    <link href="https://ferrerobomb.github.io/2020/02/17/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9837-%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    <id>https://ferrerobomb.github.io/2020/02/17/leetcode-面试题37-序列化二叉树/</id>
+    <published>2020-02-17T05:34:22.000Z</published>
+    <updated>2020-02-25T03:58:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://leetcode-cn.com/problems/xu-lie-hua-er-cha-shu-lcof" target="_blank" rel="noopener">序列化二叉树</a></li><li>解1</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;TreeNode&#125; root</span></span><br><span class="line"><span class="comment"> * @return &#123;string&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> Codec = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!root) &#123;</span><br><span class="line">        <span class="keyword">return</span> [];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> result = [];</span><br><span class="line">    <span class="keyword">let</span> node = root;</span><br><span class="line">    <span class="keyword">let</span> queue = [node];</span><br><span class="line">    <span class="keyword">while</span> (queue.length) &#123;</span><br><span class="line">        <span class="keyword">let</span> front = queue.shift();</span><br><span class="line">        <span class="keyword">if</span> (front) &#123;</span><br><span class="line">            result.push(front.val);</span><br><span class="line">            queue.push(front.left);</span><br><span class="line">            queue.push(front.right);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            result.push(<span class="literal">null</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(result)</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = result.length<span class="number">-1</span>; i &gt; <span class="number">0</span>;i--) &#123;</span><br><span class="line">        <span class="keyword">if</span> (result[i]===<span class="literal">null</span>) &#123;</span><br><span class="line">            result.pop();</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://ferrerobomb.github.io/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode-面试题55-II-平衡二叉树</title>
+    <link href="https://ferrerobomb.github.io/2020/02/15/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9830-%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/"/>
+    <id>https://ferrerobomb.github.io/2020/02/15/leetcode-面试题30-包含min函数的栈/</id>
+    <published>2020-02-15T07:16:01.000Z</published>
+    <updated>2020-02-25T04:00:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof" target="_blank" rel="noopener">平衡二叉树</a></li><li>解1</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;TreeNode&#125; root</span></span><br><span class="line"><span class="comment"> * @return &#123;boolean&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> isBalanced = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (root === <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> left = root.left;</span><br><span class="line">    <span class="keyword">let</span> right = root.right;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">Math</span>.abs(height(left) - height(right)) &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> isBalanced(root.left) &amp;&amp; isBalanced(root.right)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> height = <span class="function">(<span class="params">root</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (root === <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span> + <span class="built_in">Math</span>.max(height(root.left), height(root.right));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://ferrerobomb.github.io/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode-面试题55-II-平衡二叉树</title>
+    <link href="https://ferrerobomb.github.io/2020/02/15/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9855-II-%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    <id>https://ferrerobomb.github.io/2020/02/15/leetcode-面试题55-II-平衡二叉树/</id>
+    <published>2020-02-15T07:16:01.000Z</published>
+    <updated>2020-02-25T04:00:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><a href="https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof" target="_blank" rel="noopener">平衡二叉树</a></li><li>解1</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;TreeNode&#125; root</span></span><br><span class="line"><span class="comment"> * @return &#123;boolean&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> isBalanced = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (root === <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> left = root.left;</span><br><span class="line">    <span class="keyword">let</span> right = root.right;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">Math</span>.abs(height(left) - height(right)) &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> isBalanced(root.left) &amp;&amp; isBalanced(root.right)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> height = <span class="function">(<span class="params">root</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (root === <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span> + <span class="built_in">Math</span>.max(height(root.left), height(root.right));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://ferrerobomb.github.io/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>今天整理一下视频音频</title>
+    <link href="https://ferrerobomb.github.io/2020/02/15/%E4%BB%8A%E5%A4%A9%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8B%E8%A7%86%E9%A2%91%E9%9F%B3%E9%A2%91/"/>
+    <id>https://ferrerobomb.github.io/2020/02/15/今天整理一下视频音频/</id>
+    <published>2020-02-15T04:40:35.000Z</published>
+    <updated>2020-02-15T04:40:36.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>引入独立html页面</title>
+    <link href="https://ferrerobomb.github.io/2020/02/12/2020%E5%B9%B42%E6%9C%8811%E6%97%A5-%E5%BC%95%E5%85%A5%E7%8B%AC%E7%AB%8Bhtml%E9%A1%B5%E9%9D%A2/"/>
+    <id>https://ferrerobomb.github.io/2020/02/12/2020年2月11日-引入独立html页面/</id>
+    <published>2020-02-12T04:49:31.000Z</published>
+    <updated>2020-02-12T05:11:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>我的主题是melody。配置文件在source目录下的_data下，请注意先找到自己主题生效的配置文件，然后在配置文件中的menu下添加目录（如没有menu目录就自己建一个）</li><li>第二步，在hexo的配置文件中添加跳过渲染配置，（在根目录下）</li><li>第三步，在source文件夹下建一个文件夹，名字和主题配置文件中menu下添加的目录名对应</li><li>第四步，进入建好的文件夹，创建index.html入口文件<br>效果：点击目录里xxx，直接跳转到index.html</li></ul><p>以下是图片<br><img src="https://cdn.jsdelivr.net/gh/ferrerobomb/jsDeliver@0.0.3/hexo根目录配置文件跳过渲染配置.png" alt="hexo根目录配置文件跳过渲染配置"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="记录" scheme="https://ferrerobomb.github.io/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>每日流水记账</title>
+    <link href="https://ferrerobomb.github.io/2020/02/12/2020%E5%B9%B42%E6%9C%8811%E6%97%A5-%E6%AF%8F%E6%97%A5%E6%B5%81%E6%B0%B4%E8%AE%B0%E8%B4%A6/"/>
+    <id>https://ferrerobomb.github.io/2020/02/12/2020年2月11日-每日流水记账/</id>
+    <published>2020-02-12T03:49:31.000Z</published>
+    <updated>2020-03-15T04:31:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li><p>拒绝浪费生命^_^</p></li><li><p>2020年2月11日 day2</p><ul><li>读书30m</li><li>学英语20m</li><li>健身1m</li><li><del>今天荒废了一天</del></li><li><del>今天荒废了一天</del></li></ul></li><li><p>2020年2月12日 day3</p><ul><li>学英语20m+</li><li>读书30m</li><li><del>今天荒废了一天</del></li></ul></li><li><p>2020年2月13日 day4</p><ul><li>学英语20m+</li><li>没读书</li></ul></li><li><p>2020年2月14日 day5</p><ul><li>学英语10m+</li><li>没读书</li></ul></li><li><p>2020年2月15日 day6</p><ul><li>学英语20m+</li><li>读书30m+，整本书都在说乔布斯是一个粗鲁，不谙世事的人</li><li>整理了<a href="https://ferrerobomb.github.io/2019/04/01/%E8%B6%85%E7%BA%A7%E7%B4%A2%E5%BC%95%E8%AE%A1%E5%88%92/">索引表</a>，加了一些网站,看了一下置顶功能，先不加了</li></ul></li><li><p>2020年2月16日 day7</p><ul><li>学英语20m+</li><li>读书30m+</li></ul></li><li><p>2020年2月17日 day8</p><ul><li>读书任务√</li><li>学英语任务√</li></ul></li><li><p>2020年2月18日 day9</p><ul><li>读书任务√</li><li>学英语任务√</li></ul></li><li><p>2020年2月19日 day10</p><ul><li>读书任务√</li><li>学英语任务√</li><li>leetcode√</li></ul></li><li><p>2020年2月20日 day11</p><ul><li>学英语任务√</li></ul></li><li><p>2020年2月21日 day12</p><ul><li>学英语任务√</li></ul></li><li><p>2020年2月22日 day13</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年2月23日 day14</p><ul><li>学英语任务√ </li><li>leetcode√ </li></ul></li><li><p>2020年2月24日 day15</p><ul><li>学英语任务√ </li><li>leetcode√ </li></ul></li><li><p>2020年2月25日 day16</p><ul><li>学英语任务√ </li><li>leetcode√ </li></ul></li><li><p>2020年2月26日 day17</p><ul><li>学英语任务√ </li><li>leetcode√ </li></ul></li><li><p>2020年2月27日 day18</p><ul><li>学英语任务√ </li><li>leetcode√ </li><li>读书任务√ 。<a href="https://ferrerobomb.github.io/2020/02/27/终于正式读完了人生的第一本书/">note</a></li></ul></li><li><p>2020年2月28日 day19</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年2月29日 day20</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月1日 day21</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月2日 day22</p><ul><li><h3 id="今天荒废了一天"><a href="#今天荒废了一天" class="headerlink" title="今天荒废了一天"></a>今天荒废了一天</h3></li></ul></li><li><p>2020年3月3日 day23</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月4日 day24</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月5日 day25</p><ul><li><h3 id="今天荒废了一天-1"><a href="#今天荒废了一天-1" class="headerlink" title="今天荒废了一天"></a>今天荒废了一天</h3></li></ul></li><li><p>2020年3月6日 day26</p><ul><li><h3 id="今天荒废了一天-2"><a href="#今天荒废了一天-2" class="headerlink" title="今天荒废了一天"></a>今天荒废了一天</h3></li></ul></li><li><p>2020年3月7日 day27</p><ul><li><h3 id="今天荒废了一天-3"><a href="#今天荒废了一天-3" class="headerlink" title="今天荒废了一天"></a>今天荒废了一天</h3></li></ul></li><li><p>2020年3月8日 day28</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月9日 day29</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月10日 day30</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月11日 day31</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月12日 day32</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月13日 day33</p><ul><li><h3 id="今天荒废了一天-4"><a href="#今天荒废了一天-4" class="headerlink" title="今天荒废了一天"></a>今天荒废了一天</h3></li></ul></li><li><p>2020年3月14日 day34</p><ul><li><h3 id="今天荒废了一天-5"><a href="#今天荒废了一天-5" class="headerlink" title="今天荒废了一天"></a>今天荒废了一天</h3></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="记录" scheme="https://ferrerobomb.github.io/tags/%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020年2月10日PCTEST</title>
+    <link href="https://ferrerobomb.github.io/2020/02/10/2020%E5%B9%B42%E6%9C%8810%E6%97%A5PCTEST/"/>
+    <id>https://ferrerobomb.github.io/2020/02/10/2020年2月10日PCTEST/</id>
+    <published>2020-02-10T15:05:31.000Z</published>
+    <updated>2020-02-10T15:20:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>2020年2月10日PC终端测试</li></ul><p>很久没写了，又上来摸摸，熟悉了一下流程。接下来会修改以前博客的错别字，修改【多终端同步博客操作】<a href="https://ferrerobomb.github.io/2019/03/31/%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E5%8D%9A%E5%AE%A2%E6%93%8D%E4%BD%9C/">线上链接</a>  <a href="多终端同步博客操作.md">本地连接</a>  (这次主要是完善一下，还是有不够明确的细节)</p><p>day 1</p><p>读书30m+</p><p>学英语10m+</p><p>工作</p><p><del>健身</del></p><p><del>我又浪费了一天时间</del></p><p>总是想写一些东西，但是又不会写作。准备找东西学学写作，先入个门吧</p><p>乔布斯说，与其被竞争对手干掉，不如我们自己干掉自己</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="test" scheme="https://ferrerobomb.github.io/tags/test/"/>
+    
+  </entry>
+  
+</feed>
