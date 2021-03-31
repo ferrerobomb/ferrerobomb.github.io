@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>橙柚养乐多的博客</title>
   
-  <subtitle>每日任务表：读书、学英语、看新闻</subtitle>
+  <subtitle>记录</subtitle>
   <link href="/rss.xml" rel="self"/>
   
   <link href="https://ferrerobomb.github.io/"/>
-  <updated>2021-03-30T16:19:33.974Z</updated>
+  <updated>2021-03-31T16:00:12.612Z</updated>
   <id>https://ferrerobomb.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>整理完毕！</title>
+    <link href="https://ferrerobomb.github.io/2021/03/31/%E6%95%B4%E7%90%86%E5%AE%8C%E6%AF%95%EF%BC%81/"/>
+    <id>https://ferrerobomb.github.io/2021/03/31/整理完毕！/</id>
+    <published>2021-03-31T15:56:44.000Z</published>
+    <updated>2021-03-31T16:00:12.612Z</updated>
+    
+    <content type="html"><![CDATA[<p>本来在mac上都整理完了，由于改了环境和或者是别的什么原因（目前没查出来），又给搞炸了。<br>重新弄一下。以后这种消耗意志力的操作就Ban掉吧，老老实实一个平台发布。毕竟这台windows环境比较简单</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>重新拾起</title>
@@ -481,32 +505,6 @@
     
     
       <category term="test" scheme="https://ferrerobomb.github.io/tags/test/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于chrome卡顿的解决方法</title>
-    <link href="https://ferrerobomb.github.io/2019/05/07/%E5%85%B3%E4%BA%8Echrome%E5%8D%A1%E9%A1%BF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
-    <id>https://ferrerobomb.github.io/2019/05/07/关于chrome卡顿的解决方法/</id>
-    <published>2019-05-07T06:47:29.000Z</published>
-    <updated>2020-02-10T15:02:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近一周chrome突然变得特别卡，可能是装了什么插件导致</p><p>关闭GPU加速等不起作用，最后还是重置解决，重置之后插件也就都关闭了，就不卡了。</p><p>在设置的最下面重置</p><p><img src="https://cdn.jsdelivr.net/gh/ferrerobomb/jsDeliver@0.0.2/chrome%E9%87%8D%E7%BD%AE%E6%88%AA%E5%9B%BE.png" alt="chrome重置截图"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          
-        
-      
-    
-    </summary>
-    
-    
-      <category term="chrome" scheme="https://ferrerobomb.github.io/tags/chrome/"/>
     
   </entry>
   
