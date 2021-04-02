@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title>JSON.stringify模拟实现的学习与研究</title>
+      <link href="/2021/04/02/JSON-stringify%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E7%A0%94%E7%A9%B6/"/>
+      <url>/2021/04/02/JSON-stringify%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E7%A0%94%E7%A9%B6/</url>
+      
+        <content type="html"><![CDATA[<p>模拟实现的JSON.stringify涉及到JavaScript的类型判断和递归知识，还有一些展示形式为什么会这样，比如是否有引号，单引号双引号<br>吃透这个方法感觉能有不错的帮助。这篇就打算彻底写清楚数据类型，表现形式以及为什么</p><p>关于JavaScript的数据类型，随着JavaScript的发展，数据类型不断增多，截止到2021年4月2日</p><p>分为基础数据类型和引用数据类型</p><ul><li>基础数据类型</li></ul><ul><li>引用数据类型</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">easyJSONStringify</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> type = <span class="keyword">typeof</span> data;</span><br><span class="line">  <span class="keyword">if</span> (type !== <span class="string">'object'</span>) &#123; <span class="comment">// 基础数据类型</span></span><br><span class="line">    <span class="keyword">let</span> result = data;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">Number</span>.isNaN(data) || data === <span class="literal">Infinity</span>) &#123;</span><br><span class="line">      result = <span class="string">'null'</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (</span><br><span class="line">      type === <span class="string">'function'</span> ||</span><br><span class="line">      type === <span class="string">'undefined'</span> ||</span><br><span class="line">      type === <span class="string">'symbol'</span></span><br><span class="line">    ) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">undefined</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (type === <span class="string">'string'</span>) &#123;</span><br><span class="line">      result = <span class="string">'"'</span> + data + <span class="string">'"'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">String</span>(result);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123; <span class="comment">// type === 'object' 引用数据类型</span></span><br><span class="line">    <span class="keyword">if</span> (data === <span class="literal">null</span>) &#123; <span class="comment">// 考虑 typeof null === 'object'</span></span><br><span class="line">      <span class="keyword">return</span> <span class="string">'null'</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (data.toJSON &amp;&amp; <span class="keyword">typeof</span> data.toJSON === <span class="string">'function'</span>) &#123; <span class="comment">// Date</span></span><br><span class="line">      <span class="keyword">return</span> easyJSONStringify(data.toJSON())</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">Array</span>.isArray(data)) &#123;</span><br><span class="line">      <span class="keyword">let</span> result = [];</span><br><span class="line">      data.forEach(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> typeItem = <span class="keyword">typeof</span> item;</span><br><span class="line">        <span class="keyword">if</span> (</span><br><span class="line">          typeItem === <span class="string">'function'</span> ||</span><br><span class="line">          typeItem === <span class="string">'undefined'</span> ||</span><br><span class="line">          typeItem === <span class="string">'symbol'</span></span><br><span class="line">        ) &#123;</span><br><span class="line">          result[index] =  <span class="string">'null'</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          result[index] = easyJSONStringify(item);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      <span class="keyword">return</span> (<span class="string">`[<span class="subst">$&#123;result&#125;</span>]`</span>).replace(<span class="regexp">/'/g</span>, <span class="string">'\"'</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123; <span class="comment">// object</span></span><br><span class="line">      <span class="keyword">let</span> result = [];</span><br><span class="line">      <span class="built_in">Object</span>.keys(data).forEach(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        result.push(<span class="string">'"'</span> + item + <span class="string">'":'</span> + easyJSONStringify(data[item]));</span><br><span class="line">      &#125;);</span><br><span class="line">      <span class="keyword">return</span> (<span class="string">`&#123;<span class="subst">$&#123;result&#125;</span>&#125;`</span>).replace(<span class="regexp">/'/g</span>, <span class="string">'\"'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> de = [<span class="number">1</span>, <span class="literal">undefined</span>, <span class="literal">NaN</span>, [<span class="number">1</span>, &#123;<span class="attr">a</span>: <span class="number">1</span>, <span class="string">"b"</span>: &#123;<span class="attr">c</span> : <span class="number">1</span>&#125;&#125;], <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(de))</span><br><span class="line"><span class="built_in">console</span>.log(easyJSONStringify(de))</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>发现hexo博客框架melody的问题</title>
+      <link href="/2021/04/02/%E5%8F%91%E7%8E%B0hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6melody%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+      <url>/2021/04/02/%E5%8F%91%E7%8E%B0hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6melody%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>在摘要中不能出现代码框，要不然会出现移动端适配问题。（不换行）。要是有code就在每篇前面多写点吧！</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>整理完毕！</title>
       <link href="/2021/03/31/%E6%95%B4%E7%90%86%E5%AE%8C%E6%AF%95%EF%BC%81/"/>
       <url>/2021/03/31/%E6%95%B4%E7%90%86%E5%AE%8C%E6%AF%95%EF%BC%81/</url>
@@ -1055,9 +1081,9 @@
       
         <tags>
             
-            <tag> AngularJS </tag>
-            
             <tag> 前端 </tag>
+            
+            <tag> AngularJS </tag>
             
         </tags>
       

@@ -6,7 +6,7 @@
   <link href="/rss.xml" rel="self"/>
   
   <link href="https://ferrerobomb.github.io/"/>
-  <updated>2021-03-31T16:00:12.612Z</updated>
+  <updated>2021-04-02T09:00:32.381Z</updated>
   <id>https://ferrerobomb.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JSON.stringify模拟实现的学习与研究</title>
+    <link href="https://ferrerobomb.github.io/2021/04/02/JSON-stringify%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E7%A0%94%E7%A9%B6/"/>
+    <id>https://ferrerobomb.github.io/2021/04/02/JSON-stringify模拟实现的学习与研究/</id>
+    <published>2021-04-02T08:42:28.000Z</published>
+    <updated>2021-04-02T09:00:32.381Z</updated>
+    
+    <content type="html"><![CDATA[<p>模拟实现的JSON.stringify涉及到JavaScript的类型判断和递归知识，还有一些展示形式为什么会这样，比如是否有引号，单引号双引号<br>吃透这个方法感觉能有不错的帮助。这篇就打算彻底写清楚数据类型，表现形式以及为什么</p><p>关于JavaScript的数据类型，随着JavaScript的发展，数据类型不断增多，截止到2021年4月2日</p><p>分为基础数据类型和引用数据类型</p><ul><li>基础数据类型</li></ul><ul><li>引用数据类型</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">easyJSONStringify</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> type = <span class="keyword">typeof</span> data;</span><br><span class="line">  <span class="keyword">if</span> (type !== <span class="string">'object'</span>) &#123; <span class="comment">// 基础数据类型</span></span><br><span class="line">    <span class="keyword">let</span> result = data;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">Number</span>.isNaN(data) || data === <span class="literal">Infinity</span>) &#123;</span><br><span class="line">      result = <span class="string">'null'</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (</span><br><span class="line">      type === <span class="string">'function'</span> ||</span><br><span class="line">      type === <span class="string">'undefined'</span> ||</span><br><span class="line">      type === <span class="string">'symbol'</span></span><br><span class="line">    ) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">undefined</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (type === <span class="string">'string'</span>) &#123;</span><br><span class="line">      result = <span class="string">'"'</span> + data + <span class="string">'"'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">String</span>(result);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123; <span class="comment">// type === 'object' 引用数据类型</span></span><br><span class="line">    <span class="keyword">if</span> (data === <span class="literal">null</span>) &#123; <span class="comment">// 考虑 typeof null === 'object'</span></span><br><span class="line">      <span class="keyword">return</span> <span class="string">'null'</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (data.toJSON &amp;&amp; <span class="keyword">typeof</span> data.toJSON === <span class="string">'function'</span>) &#123; <span class="comment">// Date</span></span><br><span class="line">      <span class="keyword">return</span> easyJSONStringify(data.toJSON())</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">Array</span>.isArray(data)) &#123;</span><br><span class="line">      <span class="keyword">let</span> result = [];</span><br><span class="line">      data.forEach(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> typeItem = <span class="keyword">typeof</span> item;</span><br><span class="line">        <span class="keyword">if</span> (</span><br><span class="line">          typeItem === <span class="string">'function'</span> ||</span><br><span class="line">          typeItem === <span class="string">'undefined'</span> ||</span><br><span class="line">          typeItem === <span class="string">'symbol'</span></span><br><span class="line">        ) &#123;</span><br><span class="line">          result[index] =  <span class="string">'null'</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          result[index] = easyJSONStringify(item);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      <span class="keyword">return</span> (<span class="string">`[<span class="subst">$&#123;result&#125;</span>]`</span>).replace(<span class="regexp">/'/g</span>, <span class="string">'\"'</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123; <span class="comment">// object</span></span><br><span class="line">      <span class="keyword">let</span> result = [];</span><br><span class="line">      <span class="built_in">Object</span>.keys(data).forEach(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span><br><span class="line">        result.push(<span class="string">'"'</span> + item + <span class="string">'":'</span> + easyJSONStringify(data[item]));</span><br><span class="line">      &#125;);</span><br><span class="line">      <span class="keyword">return</span> (<span class="string">`&#123;<span class="subst">$&#123;result&#125;</span>&#125;`</span>).replace(<span class="regexp">/'/g</span>, <span class="string">'\"'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> de = [<span class="number">1</span>, <span class="literal">undefined</span>, <span class="literal">NaN</span>, [<span class="number">1</span>, &#123;<span class="attr">a</span>: <span class="number">1</span>, <span class="string">"b"</span>: &#123;<span class="attr">c</span> : <span class="number">1</span>&#125;&#125;], <span class="number">3</span>]</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">JSON</span>.stringify(de))</span><br><span class="line"><span class="built_in">console</span>.log(easyJSONStringify(de))</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>发现hexo博客框架melody的问题</title>
+    <link href="https://ferrerobomb.github.io/2021/04/02/%E5%8F%91%E7%8E%B0hexo%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6melody%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://ferrerobomb.github.io/2021/04/02/发现hexo博客框架melody的问题/</id>
+    <published>2021-04-02T08:40:37.000Z</published>
+    <updated>2021-04-02T08:41:58.496Z</updated>
+    
+    <content type="html"><![CDATA[<p>在摘要中不能出现代码框，要不然会出现移动端适配问题。（不换行）。要是有code就在每篇前面多写点吧！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>整理完毕！</title>
@@ -453,58 +501,6 @@
     
     
       <category term="记录" scheme="https://ferrerobomb.github.io/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>每日流水记账</title>
-    <link href="https://ferrerobomb.github.io/2020/02/12/2020%E5%B9%B42%E6%9C%8811%E6%97%A5-%E6%AF%8F%E6%97%A5%E6%B5%81%E6%B0%B4%E8%AE%B0%E8%B4%A6/"/>
-    <id>https://ferrerobomb.github.io/2020/02/12/2020年2月11日-每日流水记账/</id>
-    <published>2020-02-12T03:49:31.000Z</published>
-    <updated>2020-03-15T04:31:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li><p>拒绝浪费生命^_^</p></li><li><p>2020年2月11日 day2</p><ul><li>读书30m</li><li>学英语20m</li><li>健身1m</li><li><del>今天荒废了一天</del></li><li><del>今天荒废了一天</del></li></ul></li><li><p>2020年2月12日 day3</p><ul><li>学英语20m+</li><li>读书30m</li><li><del>今天荒废了一天</del></li></ul></li><li><p>2020年2月13日 day4</p><ul><li>学英语20m+</li><li>没读书</li></ul></li><li><p>2020年2月14日 day5</p><ul><li>学英语10m+</li><li>没读书</li></ul></li><li><p>2020年2月15日 day6</p><ul><li>学英语20m+</li><li>读书30m+，整本书都在说乔布斯是一个粗鲁，不谙世事的人</li><li>整理了<a href="https://ferrerobomb.github.io/2019/04/01/%E8%B6%85%E7%BA%A7%E7%B4%A2%E5%BC%95%E8%AE%A1%E5%88%92/">索引表</a>，加了一些网站,看了一下置顶功能，先不加了</li></ul></li><li><p>2020年2月16日 day7</p><ul><li>学英语20m+</li><li>读书30m+</li></ul></li><li><p>2020年2月17日 day8</p><ul><li>读书任务√</li><li>学英语任务√</li></ul></li><li><p>2020年2月18日 day9</p><ul><li>读书任务√</li><li>学英语任务√</li></ul></li><li><p>2020年2月19日 day10</p><ul><li>读书任务√</li><li>学英语任务√</li><li>leetcode√</li></ul></li><li><p>2020年2月20日 day11</p><ul><li>学英语任务√</li></ul></li><li><p>2020年2月21日 day12</p><ul><li>学英语任务√</li></ul></li><li><p>2020年2月22日 day13</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年2月23日 day14</p><ul><li>学英语任务√ </li><li>leetcode√ </li></ul></li><li><p>2020年2月24日 day15</p><ul><li>学英语任务√ </li><li>leetcode√ </li></ul></li><li><p>2020年2月25日 day16</p><ul><li>学英语任务√ </li><li>leetcode√ </li></ul></li><li><p>2020年2月26日 day17</p><ul><li>学英语任务√ </li><li>leetcode√ </li></ul></li><li><p>2020年2月27日 day18</p><ul><li>学英语任务√ </li><li>leetcode√ </li><li>读书任务√ 。<a href="https://ferrerobomb.github.io/2020/02/27/终于正式读完了人生的第一本书/">note</a></li></ul></li><li><p>2020年2月28日 day19</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年2月29日 day20</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月1日 day21</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月2日 day22</p><ul><li><h3 id="今天荒废了一天"><a href="#今天荒废了一天" class="headerlink" title="今天荒废了一天"></a>今天荒废了一天</h3></li></ul></li><li><p>2020年3月3日 day23</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月4日 day24</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月5日 day25</p><ul><li><h3 id="今天荒废了一天-1"><a href="#今天荒废了一天-1" class="headerlink" title="今天荒废了一天"></a>今天荒废了一天</h3></li></ul></li><li><p>2020年3月6日 day26</p><ul><li><h3 id="今天荒废了一天-2"><a href="#今天荒废了一天-2" class="headerlink" title="今天荒废了一天"></a>今天荒废了一天</h3></li></ul></li><li><p>2020年3月7日 day27</p><ul><li><h3 id="今天荒废了一天-3"><a href="#今天荒废了一天-3" class="headerlink" title="今天荒废了一天"></a>今天荒废了一天</h3></li></ul></li><li><p>2020年3月8日 day28</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月9日 day29</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月10日 day30</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月11日 day31</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月12日 day32</p><ul><li>学英语任务√ </li></ul></li><li><p>2020年3月13日 day33</p><ul><li><h3 id="今天荒废了一天-4"><a href="#今天荒废了一天-4" class="headerlink" title="今天荒废了一天"></a>今天荒废了一天</h3></li></ul></li><li><p>2020年3月14日 day34</p><ul><li><h3 id="今天荒废了一天-5"><a href="#今天荒废了一天-5" class="headerlink" title="今天荒废了一天"></a>今天荒废了一天</h3></li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          
-        
-      
-    
-    </summary>
-    
-    
-      <category term="记录" scheme="https://ferrerobomb.github.io/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2020年2月10日PCTEST</title>
-    <link href="https://ferrerobomb.github.io/2020/02/10/2020%E5%B9%B42%E6%9C%8810%E6%97%A5PCTEST/"/>
-    <id>https://ferrerobomb.github.io/2020/02/10/2020年2月10日PCTEST/</id>
-    <published>2020-02-10T15:05:31.000Z</published>
-    <updated>2020-02-10T15:20:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li>2020年2月10日PC终端测试</li></ul><p>很久没写了，又上来摸摸，熟悉了一下流程。接下来会修改以前博客的错别字，修改【多终端同步博客操作】<a href="https://ferrerobomb.github.io/2019/03/31/%E5%A4%9A%E7%BB%88%E7%AB%AF%E5%90%8C%E6%AD%A5%E5%8D%9A%E5%AE%A2%E6%93%8D%E4%BD%9C/">线上链接</a>  <a href="多终端同步博客操作.md">本地连接</a>  (这次主要是完善一下，还是有不够明确的细节)</p><p>day 1</p><p>读书30m+</p><p>学英语10m+</p><p>工作</p><p><del>健身</del></p><p><del>我又浪费了一天时间</del></p><p>总是想写一些东西，但是又不会写作。准备找东西学学写作，先入个门吧</p><p>乔布斯说，与其被竞争对手干掉，不如我们自己干掉自己</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          
-        
-      
-    
-    </summary>
-    
-    
-      <category term="test" scheme="https://ferrerobomb.github.io/tags/test/"/>
     
   </entry>
   
