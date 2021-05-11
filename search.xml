@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>输入框按下键盘的事件</title>
+      <link href="/2021/05/12/%E8%BE%93%E5%85%A5%E6%A1%86%E6%8C%89%E4%B8%8B%E9%94%AE%E7%9B%98%E7%9A%84%E4%BA%8B%E4%BB%B6/"/>
+      <url>/2021/05/12/%E8%BE%93%E5%85%A5%E6%A1%86%E6%8C%89%E4%B8%8B%E9%94%AE%E7%9B%98%E7%9A%84%E4%BA%8B%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<p>一个经常遇到的场景，输入框按下回车</p><p>一个经常遇到的场景，输入框按下回车</p><p>一个经常遇到的场景，输入框按下回车</p><p>一个经常遇到的场景，输入框按下回车</p><p>一个经常遇到的场景，输入框按下回车</p><p>那么按下回车之后会发生什么，有三个事件，按以下顺序触发，可自行尝试</p><ul><li>keydown </li><li>keypress</li><li>keyup </li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vue </span></span><br><span class="line"><span class="comment">// 仅尝试了chrome环境</span></span><br><span class="line"><span class="comment">// @keydown.native="handleKeyDown($event)"</span></span><br><span class="line"><span class="comment">// @keypress.native="handleKeyDown($event)"</span></span><br><span class="line"><span class="comment">// @keyup.native="handleKeyDown($event)"</span></span><br><span class="line"><span class="comment">// 这个需求是用户想ctrl+enter是换行，直接按enter是发送</span></span><br><span class="line"><span class="comment">// 关于判断的方法，最新的推荐写法是直接判断key，都写上的原因是增加兼容性</span></span><br><span class="line"><span class="comment">// 还可以增加防抖</span></span><br><span class="line"></span><br><span class="line">handleKeyDown (event) &#123;</span><br><span class="line">  <span class="keyword">let</span> e = <span class="built_in">arguments</span>[<span class="number">0</span>]</span><br><span class="line">  <span class="comment">// console.log(e.key, e)</span></span><br><span class="line">  <span class="keyword">if</span> (e.key === <span class="string">'Enter'</span> || e.code === <span class="string">'Enter'</span> || e.keyCode === <span class="number">13</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (e.ctrlKey) &#123;</span><br><span class="line">      <span class="keyword">this</span>.textarea += <span class="string">'\n'</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123; <span class="comment">// 点击了enter触发</span></span><br><span class="line">      event.preventDefault() <span class="comment">// 默认换行，阻止</span></span><br><span class="line">      <span class="keyword">this</span>.sendData()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure><p>用keydown遇到一个坑，用户输入的时候会有中英文一起输入的时候。这种情况标准操作肯定是输入完中文，切换到英文输入法，再输入英文，再切换中文输入法，再循环。但是我们经常一直使用中文输入法，遇到英文就打出来再按回车，这种情况会出现将输入框中已经写好的中文发送出去，同时将英文写进输入框，不符合要求。</p><p>【解决方法】换成keypress即可</p><p>不同浏览器环境等待研究</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JSON.stringify模拟实现的学习与研究</title>
       <link href="/2021/04/02/JSON-stringify%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E7%A0%94%E7%A9%B6/"/>
       <url>/2021/04/02/JSON-stringify%E6%A8%A1%E6%8B%9F%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E7%A0%94%E7%A9%B6/</url>
