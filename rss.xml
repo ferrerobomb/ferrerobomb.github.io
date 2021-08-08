@@ -6,7 +6,7 @@
   <link href="/rss.xml" rel="self"/>
   
   <link href="https://ferrerobomb.github.io/"/>
-  <updated>2021-05-11T16:46:11.770Z</updated>
+  <updated>2021-08-08T03:14:41.200Z</updated>
   <id>https://ferrerobomb.github.io/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="https://ferrerobomb.github.io/2021/08/08/test/"/>
+    <id>https://ferrerobomb.github.io/2021/08/08/test/</id>
+    <published>2021-08-08T03:14:41.000Z</published>
+    <updated>2021-08-08T03:14:41.200Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>输入框按下键盘的事件</title>
@@ -485,20 +499,6 @@
     
     
       <category term="leetcode" scheme="https://ferrerobomb.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>今天整理一下视频音频</title>
-    <link href="https://ferrerobomb.github.io/2020/02/15/%E4%BB%8A%E5%A4%A9%E6%95%B4%E7%90%86%E4%B8%80%E4%B8%8B%E8%A7%86%E9%A2%91%E9%9F%B3%E9%A2%91/"/>
-    <id>https://ferrerobomb.github.io/2020/02/15/今天整理一下视频音频/</id>
-    <published>2020-02-15T04:40:35.000Z</published>
-    <updated>2020-02-15T04:40:36.000Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   
