@@ -6,7 +6,7 @@
   <link href="/rss.xml" rel="self"/>
   
   <link href="https://ferrerobomb.github.io/"/>
-  <updated>2021-08-08T03:35:30.652Z</updated>
+  <updated>2021-08-19T15:33:32.641Z</updated>
   <id>https://ferrerobomb.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode-516.最长回文子序列</title>
+    <link href="https://ferrerobomb.github.io/2021/08/19/leetcode-516-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E5%BA%8F%E5%88%97/"/>
+    <id>https://ferrerobomb.github.io/2021/08/19/leetcode-516-最长回文子序列/</id>
+    <published>2021-08-19T15:33:02.000Z</published>
+    <updated>2021-08-19T15:33:32.641Z</updated>
+    
+    <content type="html"><![CDATA[<p>/*</p><p>此内容无用</p><p>为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字</p><p>*/</p><ul><li><p><a href="https://leetcode-cn.com/problems/longest-palindromic-subsequence/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/longest-palindromic-subsequence/</a></p></li><li><p>动态规划 - 二位数组的数据结构</p></li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; nums</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">judge(s) &#123;</span><br><span class="line">  <span class="keyword">const</span> n = s.length;</span><br><span class="line">  <span class="keyword">const</span> dp = <span class="keyword">new</span> <span class="built_in">Array</span>(n).fill(<span class="number">0</span>).map(<span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">new</span> <span class="built_in">Array</span>(n).fill(<span class="number">0</span>));</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`外层i=<span class="subst">$&#123;i&#125;</span>`</span>);</span><br><span class="line">    dp[i][i] = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">const</span> c1 = s[i];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> j = i + <span class="number">1</span>; j &lt; n; j++) &#123;</span><br><span class="line">      <span class="keyword">const</span> c2 = s[j];</span><br><span class="line">      <span class="keyword">if</span> (c1 === c2) &#123;</span><br><span class="line">        dp[i][j] = dp[i + <span class="number">1</span>][j - <span class="number">1</span>] + <span class="number">2</span>;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        dp[i][j] = <span class="built_in">Math</span>.max(dp[i + <span class="number">1</span>][j], dp[i][j - <span class="number">1</span>]);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">`i=<span class="subst">$&#123;i&#125;</span>, j=<span class="subst">$&#123;j&#125;</span>, c1=<span class="subst">$&#123;c1&#125;</span>, c2=<span class="subst">$&#123;c2&#125;</span>`</span>, <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(dp)));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> dp[<span class="number">0</span>][n - <span class="number">1</span>];</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure><h1 id><a href="#" class="headerlink" title=" "></a> </h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode-413.等差数列划分</title>
+    <link href="https://ferrerobomb.github.io/2021/08/19/leetcode-413-%E7%AD%89%E5%B7%AE%E6%95%B0%E5%88%97%E5%88%92%E5%88%86/"/>
+    <id>https://ferrerobomb.github.io/2021/08/19/leetcode-413-等差数列划分/</id>
+    <published>2021-08-19T15:30:53.000Z</published>
+    <updated>2021-08-19T15:32:42.328Z</updated>
+    
+    <content type="html"><![CDATA[<p>/*</p><p>此内容无用</p><p>为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字为了不出bug的占位文字</p><p>*/</p><ul><li><p><a href="https://leetcode-cn.com/problems/arithmetic-slices/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/arithmetic-slices/</a></p></li><li><p>动态规划解法</p></li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; nums</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> numberOfArithmeticSlices = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> array = <span class="keyword">new</span> <span class="built_in">Array</span>(nums.length).fill(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">let</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">1</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[i + <span class="number">1</span>] - nums[i] === nums[i] - nums[i - <span class="number">1</span>]) &#123;</span><br><span class="line">            array[i + <span class="number">1</span>] = array[i] + <span class="number">1</span>;</span><br><span class="line">            sum += array[i + <span class="number">1</span>]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>windows窗口在屏幕外小技巧</title>
@@ -444,58 +492,6 @@
     <updated>2020-02-25T03:55:56.000Z</updated>
     
     <content type="html"><![CDATA[<ul><li><a href="https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof" target="_blank" rel="noopener">从上到下打印二叉树 III</a></li><li>解1</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;TreeNode&#125; root</span></span><br><span class="line"><span class="comment"> * @return &#123;number[][]&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> levelOrder = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!root) &#123;</span><br><span class="line">        <span class="keyword">return</span> [];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> result = [];</span><br><span class="line">    <span class="keyword">let</span> row = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">let</span> queue = [root];</span><br><span class="line">    <span class="keyword">while</span> (queue.length) &#123;</span><br><span class="line">        <span class="keyword">let</span> rowArr = [];</span><br><span class="line">        <span class="keyword">let</span> length = queue.length</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; length;i++) &#123;</span><br><span class="line">            <span class="keyword">let</span> node = queue.shift();</span><br><span class="line">            <span class="keyword">if</span> (row % <span class="number">2</span> === <span class="number">1</span>) &#123;</span><br><span class="line">                rowArr.push(node.val);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                rowArr.unshift(node.val);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(node.left) queue.push(node.left);</span><br><span class="line">            <span class="keyword">if</span>(node.right) queue.push(node.right);</span><br><span class="line">        &#125;</span><br><span class="line">        result.push(rowArr);</span><br><span class="line">        row++</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="https://ferrerobomb.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode-面试题37-序列化二叉树</title>
-    <link href="https://ferrerobomb.github.io/2020/02/17/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9837-%E5%BA%8F%E5%88%97%E5%8C%96%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
-    <id>https://ferrerobomb.github.io/2020/02/17/leetcode-面试题37-序列化二叉树/</id>
-    <published>2020-02-17T05:34:22.000Z</published>
-    <updated>2020-02-25T03:58:58.000Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li><a href="https://leetcode-cn.com/problems/xu-lie-hua-er-cha-shu-lcof" target="_blank" rel="noopener">序列化二叉树</a></li><li>解1</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;TreeNode&#125; root</span></span><br><span class="line"><span class="comment"> * @return &#123;string&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> Codec = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!root) &#123;</span><br><span class="line">        <span class="keyword">return</span> [];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> result = [];</span><br><span class="line">    <span class="keyword">let</span> node = root;</span><br><span class="line">    <span class="keyword">let</span> queue = [node];</span><br><span class="line">    <span class="keyword">while</span> (queue.length) &#123;</span><br><span class="line">        <span class="keyword">let</span> front = queue.shift();</span><br><span class="line">        <span class="keyword">if</span> (front) &#123;</span><br><span class="line">            result.push(front.val);</span><br><span class="line">            queue.push(front.left);</span><br><span class="line">            queue.push(front.right);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            result.push(<span class="literal">null</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(result)</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = result.length<span class="number">-1</span>; i &gt; <span class="number">0</span>;i--) &#123;</span><br><span class="line">        <span class="keyword">if</span> (result[i]===<span class="literal">null</span>) &#123;</span><br><span class="line">            result.pop();</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="https://ferrerobomb.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode-面试题55-II-平衡二叉树</title>
-    <link href="https://ferrerobomb.github.io/2020/02/15/leetcode-%E9%9D%A2%E8%AF%95%E9%A2%9830-%E5%8C%85%E5%90%ABmin%E5%87%BD%E6%95%B0%E7%9A%84%E6%A0%88/"/>
-    <id>https://ferrerobomb.github.io/2020/02/15/leetcode-面试题30-包含min函数的栈/</id>
-    <published>2020-02-15T07:16:01.000Z</published>
-    <updated>2020-02-25T04:00:52.000Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li><a href="https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof" target="_blank" rel="noopener">平衡二叉树</a></li><li>解1</li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * function TreeNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.left = this.right = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;TreeNode&#125; root</span></span><br><span class="line"><span class="comment"> * @return &#123;boolean&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> isBalanced = <span class="function"><span class="keyword">function</span>(<span class="params">root</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (root === <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> left = root.left;</span><br><span class="line">    <span class="keyword">let</span> right = root.right;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">Math</span>.abs(height(left) - height(right)) &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> isBalanced(root.left) &amp;&amp; isBalanced(root.right)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> height = <span class="function">(<span class="params">root</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (root === <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span> + <span class="built_in">Math</span>.max(height(root.left), height(root.right));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
