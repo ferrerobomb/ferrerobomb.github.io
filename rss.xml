@@ -43,32 +43,6 @@
   </entry>
   
   <entry>
-    <title>leetcode-193. 有效电话号码</title>
-    <link href="https://ferrerobomb.github.io/2022/03/10/leetcode-193.%20%E6%9C%89%E6%95%88%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81/"/>
-    <id>https://ferrerobomb.github.io/2022/03/10/leetcode-193. 有效电话号码/</id>
-    <published>2022-03-09T19:51:47.000Z</published>
-    <updated>2022-03-09T15:57:11.587Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="leetcode-193-有效电话号码"><a href="#leetcode-193-有效电话号码" class="headerlink" title="leetcode-193. 有效电话号码"></a>leetcode-193. 有效电话号码</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个包含电话号码列表（一行一个电话号码）的文本文件 file.txt，写一个单行 bash 脚本输出所有有效的电话号码。</p><p>你可以假设一个有效的电话号码必须满足以下两种格式： (xxx) xxx-xxxx 或 xxx-xxx-xxxx。（x 表示一个数字）</p><p>你也可以假设每行前后没有多余的空格字符。</p><p>示例：</p><p>假设 file.txt 内容如下：</p><p>987-123-4567<br>123 456 7890<br>(123) 456-7890<br>你的脚本应当输出下列有效的电话号码：</p><p>987-123-4567<br>(123) 456-7890</p><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/valid-phone-numbers" target="_blank" rel="noopener">https://leetcode-cn.com/problems/valid-phone-numbers</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解1"><a href="#解1" class="headerlink" title="解1"></a>解1</h2><ul><li>[0-9]{3}<ul><li>三位数字</li></ul></li><li>[0-9]{3}-<ul><li>三位数字后面加一个-</li></ul></li><li>\([0-9]{3}\)<ul><li>小括号里面三位数字</li></ul></li><li>([0-9]{3}-|\([0-9]{3}\))<ul><li>或</li></ul></li><li>[0-9]{3}-[0-9]{4}<ul><li>三位数字-四位数字</li></ul></li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Read from the file file.txt and output all valid phone numbers to stdout.</span></span><br><span class="line">grep -P <span class="string">'^([0-9]&#123;3&#125;-|\([0-9]&#123;3&#125;\))[0-9]&#123;3&#125;-[0-9]&#123;4&#125;$'</span> file.txt</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          
-        
-      
-    
-    </summary>
-    
-    
-      <category term="leetcode" scheme="https://ferrerobomb.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
     <title>leetcode-196. 删除重复的电子邮箱</title>
     <link href="https://ferrerobomb.github.io/2022/03/09/leetcode-196.%20%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E7%9A%84%E7%94%B5%E5%AD%90%E9%82%AE%E7%AE%B1/"/>
     <id>https://ferrerobomb.github.io/2022/03/09/leetcode-196. 删除重复的电子邮箱/</id>
@@ -154,6 +128,32 @@
     <updated>2022-03-07T09:32:18.911Z</updated>
     
     <content type="html"><![CDATA[<h1 id="leetcode-2148-元素计数"><a href="#leetcode-2148-元素计数" class="headerlink" title="leetcode-2148. 元素计数"></a>leetcode-2148. 元素计数</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给你一个整数数组 nums ，统计并返回在 nums 中同时至少具有一个严格较小元素和一个严格较大元素的元素数目。</p><p>示例 1：</p><p>输入：nums = [11,7,2,15]<br>输出：2<br>解释：元素 7 ：严格较小元素是元素 2 ，严格较大元素是元素 11 。<br>元素 11 ：严格较小元素是元素 7 ，严格较大元素是元素 15 。<br>总计有 2 个元素都满足在 nums 中同时存在一个严格较小元素和一个严格较大元素。<br>示例 2：</p><p>输入：nums = [-3,3,3,90]<br>输出：2<br>解释：元素 3 ：严格较小元素是元素 -3 ，严格较大元素是元素 90 。<br>由于有两个元素的值为 3 ，总计有 2 个元素都满足在 nums 中同时存在一个严格较小元素和一个严格较大元素。</p><p>提示：</p><p>1 &lt;= nums.length &lt;= 100<br>-105 &lt;= nums[i] &lt;= 105</p><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/count-elements-with-strictly-smaller-and-greater-elements" target="_blank" rel="noopener">https://leetcode-cn.com/problems/count-elements-with-strictly-smaller-and-greater-elements</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解1-先排序，然后去掉相同的最大值和相同的最小值，取长度"><a href="#解1-先排序，然后去掉相同的最大值和相同的最小值，取长度" class="headerlink" title="解1 先排序，然后去掉相同的最大值和相同的最小值，取长度"></a>解1 先排序，然后去掉相同的最大值和相同的最小值，取长度</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; nums</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">// 先排序，然后去掉相同的最大值和相同的最小值，取长度</span></span><br><span class="line"><span class="keyword">var</span> countElements = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>&#123;</span><br><span class="line">  </span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// console.log(countElements([11,7,2,15]));</span></span><br></pre></td></tr></table></figure><h2 id="解2"><a href="#解2" class="headerlink" title="解2"></a>解2</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; nums</span></span><br><span class="line"><span class="comment"> * @return &#123;number&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> countElements = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> max = <span class="built_in">Math</span>.max(...nums)</span><br><span class="line">  <span class="keyword">let</span> min = <span class="built_in">Math</span>.min(...nums)</span><br><span class="line">  <span class="keyword">let</span> res = <span class="number">0</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; nums.length; ++i) &#123;</span><br><span class="line">    <span class="keyword">if</span> (nums[i] &gt; min &amp;&amp; nums[i] &lt; max) &#123;</span><br><span class="line">      res++</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> res</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// console.log(countElements([11,7,2,15]));</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode" scheme="https://ferrerobomb.github.io/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode-193. 有效电话号码</title>
+    <link href="https://ferrerobomb.github.io/2022/03/05/leetcode-193.%20%E6%9C%89%E6%95%88%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81/"/>
+    <id>https://ferrerobomb.github.io/2022/03/05/leetcode-193. 有效电话号码/</id>
+    <published>2022-03-04T19:51:47.000Z</published>
+    <updated>2022-03-09T15:59:53.637Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="leetcode-193-有效电话号码"><a href="#leetcode-193-有效电话号码" class="headerlink" title="leetcode-193. 有效电话号码"></a>leetcode-193. 有效电话号码</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>给定一个包含电话号码列表（一行一个电话号码）的文本文件 file.txt，写一个单行 bash 脚本输出所有有效的电话号码。</p><p>你可以假设一个有效的电话号码必须满足以下两种格式： (xxx) xxx-xxxx 或 xxx-xxx-xxxx。（x 表示一个数字）</p><p>你也可以假设每行前后没有多余的空格字符。</p><p>示例：</p><p>假设 file.txt 内容如下：</p><p>987-123-4567<br>123 456 7890<br>(123) 456-7890<br>你的脚本应当输出下列有效的电话号码：</p><p>987-123-4567<br>(123) 456-7890</p><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/valid-phone-numbers" target="_blank" rel="noopener">https://leetcode-cn.com/problems/valid-phone-numbers</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p><h2 id="解1"><a href="#解1" class="headerlink" title="解1"></a>解1</h2><ul><li>[0-9]{3}<ul><li>三位数字</li></ul></li><li>[0-9]{3}-<ul><li>三位数字后面加一个-</li></ul></li><li>\([0-9]{3}\)<ul><li>小括号里面三位数字</li></ul></li><li>([0-9]{3}-|\([0-9]{3}\))<ul><li>或</li></ul></li><li>[0-9]{3}-[0-9]{4}<ul><li>三位数字-四位数字</li></ul></li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Read from the file file.txt and output all valid phone numbers to stdout.</span></span><br><span class="line">grep -P <span class="string">'^([0-9]&#123;3&#125;-|\([0-9]&#123;3&#125;\))[0-9]&#123;3&#125;-[0-9]&#123;4&#125;$'</span> file.txt</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
