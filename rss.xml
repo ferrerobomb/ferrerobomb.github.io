@@ -43,6 +43,32 @@
   </entry>
   
   <entry>
+    <title>vscode插件使用与配置大全</title>
+    <link href="https://ferrerobomb.github.io/2022/03/19/vscode%E6%8F%92%E4%BB%B6%E4%BD%BF%E7%94%A8%E4%B8%8E%E9%85%8D%E7%BD%AE%E5%A4%A7%E5%85%A8/"/>
+    <id>https://ferrerobomb.github.io/2022/03/19/vscode插件使用与配置大全/</id>
+    <published>2022-03-19T05:58:07.000Z</published>
+    <updated>2022-03-19T06:03:07.030Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="vscode插件使用与配置大全"><a href="#vscode插件使用与配置大全" class="headerlink" title="vscode插件使用与配置大全"></a>vscode插件使用与配置大全</h1><h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><ul><li>dsznajder.es7-react-js-snippets</li></ul><p>名称: ES7+ React/Redux/React-Native snippets<br>ID: dsznajder.es7-react-js-snippets<br>说明: Extensions for React, React-Native and Redux in JS/TS with ES7+ syntax. Customizable. Built-in integration with prettier.<br>版本: 4.4.3<br>发布者: dsznajder<br>VS Marketplace 链接: <a href="https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets" target="_blank" rel="noopener">https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets</a></p><p>使用</p><p>rcc+回车：快速生成有状态组件</p><p>rfc+回车：快速生成无状态组件</p><h2 id="eslint"><a href="#eslint" class="headerlink" title="eslint"></a>eslint</h2><h2 id="tsconfig"><a href="#tsconfig" class="headerlink" title="tsconfig"></a>tsconfig</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://ferrerobomb.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>leetcode-704. 二分查找</title>
     <link href="https://ferrerobomb.github.io/2022/03/18/leetcode-704.%20%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/"/>
     <id>https://ferrerobomb.github.io/2022/03/18/leetcode-704. 二分查找/</id>
@@ -507,32 +533,6 @@
     
     
       <category term="leetcode" scheme="https://ferrerobomb.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>位运算符手册</title>
-    <link href="https://ferrerobomb.github.io/2022/02/28/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6%E6%89%8B%E5%86%8C/"/>
-    <id>https://ferrerobomb.github.io/2022/02/28/位运算符手册/</id>
-    <published>2022-02-28T11:02:11.000Z</published>
-    <updated>2022-03-01T07:57:03.712Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="位运算符手册"><a href="#位运算符手册" class="headerlink" title="位运算符手册"></a>位运算符手册</h1><p>解答JavaScript位运算疑惑</p><table><thead><tr><th><strong>运算符</strong></th><th><strong>名称</strong></th><th><strong>描述</strong></th><th><strong>常用案例</strong></th></tr></thead><tbody><tr><td>&amp;</td><td>AND</td><td>两位都是1，结果为1，否则为0</td><td>&amp;1&amp;0判断奇偶</td></tr><tr><td>\</td><td></td><td>OR</td><td>两位有一位为1，结果为1，否则为0</td><td>\</td><td>0向下取整</td></tr><tr><td>^</td><td>XOR</td><td>两位相同为0，不同为1</td><td>交换变量</td></tr><tr><td>~</td><td>NOT</td><td>所有位取反</td><td></td></tr><tr><td>&lt;&lt;</td><td>零填充左位移</td><td>所有位左移，最左脱落，最右补0</td><td>&lt;&lt;n乘以2的n次方</td></tr><tr><td>&gt;&gt;</td><td>有符号右位移</td><td></td><td></td></tr><tr><td>&gt;&gt;&gt;</td><td>零填充右位移</td><td>所有位右移，最右脱落，最左补0</td><td>&gt;&gt;&gt;1除以2</td></tr></tbody></table><h2 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h2><ul><li><p>搞懂原码反码补码</p></li><li><p>ECMAScript 中的所有数值都以 IEEE 754 64 位格式存储，但位操作并不直接应用到 64 位表示，而是先把值转换为 32 位整数，再进行位操作，之后再把结果转换为 64 位。对开发者而言，就好像只有 32 位整数一样，因 为 64 位整数存储格式是不可见的。</p><p>有符号整数使用 32 位的前 31 位表示整数值。第 32 位表示数值的符号，如 0 表示正，1 表示负。</p><p>负值以一种称为二补数（或补码）的二进制编码存储。</p><ol><li>(1) 确定绝对值的二进制表示（如，对于-18，先确定 18 的二进制表示）； </li><li>(2) 找到数值的一补数（或反码），换句话说，就是每个 0 都变成 1，每个 1 都变成 0；</li><li>(3) 给结果加 1。</li></ol></li></ul><p>- </p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          
-        
-      
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://ferrerobomb.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
